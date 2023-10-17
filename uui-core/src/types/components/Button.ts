@@ -9,20 +9,17 @@ import {
     IHasPlaceholder,
     IAnalyticableClick,
     IHasTabIndex,
-    IHasRawProps,
 } from '../props';
 import { IBasicPickerToggler, IDropdownToggler } from '../pickers';
-import { Icon } from '../objects';
+import { Icon, Link } from '../objects';
 
 export interface ButtonBaseCoreProps
     extends IHasCX,
     IClickable,
-    ICanRedirect,
     IDisableable,
     IHasIcon,
     IAnalyticableClick,
-    IHasTabIndex,
-    IHasRawProps<React.ButtonHTMLAttributes<HTMLButtonElement>> {}
+    IHasTabIndex {}
 
 export interface ButtonCoreProps extends ButtonBaseCoreProps, IHasCaption, IBasicPickerToggler, IDropdownToggler, IHasPlaceholder {
     /** Icon for drop-down toggler */
@@ -34,6 +31,37 @@ export interface ButtonCoreProps extends ButtonBaseCoreProps, IHasCaption, IBasi
     countPosition?: 'left' | 'right';
     count?: number | null;
 }
+
+type HrefButtonProps = ButtonCoreProps & {
+    href: string | never;
+    rawProps?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+    link?: never;
+};
+
+type LinkObjectButtonProps = ButtonCoreProps & {
+    link: Link;
+    rawProps?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+    href?: never;
+};
+
+type TrueButtonProps = ButtonCoreProps & {
+    rawProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
+    href?: never;
+    link?: never;
+};
+
+type TrueAnchorProps = ButtonCoreProps & {
+    rawProps?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+    href?: string;
+    link?: Link;
+};
+
+// Discuss this
+// type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;
+
+// export type OmitFromUnion<T, K extends string | number | symbol> = T extends {} ? Omit<T, K> : never;
+
+export type ButtonComponentProps = ICanRedirect & (HrefButtonProps | LinkObjectButtonProps | TrueButtonProps | TrueAnchorProps);
 
 export interface ButtonSemanticProps {
     type?: 'success' | 'cancel' | 'action';

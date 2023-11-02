@@ -8,7 +8,6 @@
     "build": "node ../uui-build/scripts/buildModule",
     "generate-components-api-deprecated": "ts-node ./getComponentsPropsSet.ts",
     "generate-components-api": "ts-node docsGen/main.ts",
-    "tsDocUtils": "ts-node docsGen/tsdoc/tsDocUtils.ts",
     "prepublish": "yarn build",
     "track-bundle-size": "node scripts/trackBundleSize.js",
     "lint": "node ../uui-build/scripts/lint",

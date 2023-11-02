@@ -2,7 +2,7 @@ import React from 'react';
 import { Modifier } from 'react-popper';
 import { Placement, Boundary } from '@popperjs/core';
 import { IDropdownBodyProps, IDropdownToggler } from '../pickers';
-import { IEditable } from '../../../src/types/props';
+import { IEditable } from '../props';
 
 export interface DropdownState {
     opened: boolean;
@@ -23,16 +23,26 @@ export interface DropdownProps extends Partial<IEditable<boolean>> {
     modifiers?: Modifier<any>[];
     /** Should we close dropdown on click on the Toggler, if it's already open? Default is true. */
 
-    openDelay?: number; // default: 0
-    closeDelay?: number; // default: 0
-    openOnClick?: boolean; // default: true
-    openOnHover?: boolean; // default: false
-    closeOnTargetClick?: boolean; // default: true
-    closeOnClickOutside?: boolean; // default: true
+    /** @default 0 */
+    openDelay?: number;
+    /** @default 0 */
+    closeDelay?: number;
+    /**
+     * @default true
+     */
+    openOnClick?: boolean;
+    /** @default false */
+    openOnHover?: boolean;
+    /** @default true */
+    closeOnTargetClick?: boolean;
+    /** @default true */
+    closeOnClickOutside?: boolean;
+    /** @default false */
     closeOnMouseLeave?: 'toggler' | 'boundary' | false;
 
     portalTarget?: HTMLElement;
     boundaryElement?: Boundary;
 
+    /** @default true */
     closeBodyOnTogglerHidden?: boolean; // default: true; Set false if you do not want to hide the dropdown body in case Toggler is out of the viewport
 }

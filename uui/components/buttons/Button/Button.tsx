@@ -12,8 +12,11 @@ export const allButtonColors: ButtonColor[] = [
 const defaultSize = '36';
 
 export interface ButtonMods {
+    /** @default '36' */
     size?: ControlSize | '18';
+    /** @default 'solid' */
     mode?: ButtonMode;
+    /** @default 'primary' */
     color?: ButtonColor;
 }
 

@@ -7,9 +7,13 @@ import css from './Badge.module.scss';
 const defaultSize = '18';
 
 export interface BadgeMods {
+    /** @default 'sky' */
     color?: EpamPrimaryColor | EpamAdditionalColor | 'white' | 'night200' | 'night300' | 'night400' | 'night500' | 'night600';
+    /** @default 'square' */
     shape?: types.ControlShape;
+    /** @default 'solid' */
     fill?: UuiBadgeMods['fill'] | 'white' | 'light' | 'none';
+    /** @default '18' */
     size?: UuiBadgeMods['size'] | '12';
 }
 

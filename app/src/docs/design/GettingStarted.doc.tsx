@@ -11,7 +11,7 @@ export class GettingStartedForDesignersDoc extends BaseDocsBlock {
             <FlexRow>
                 <div className={ css.title }>{this.title}</div>
                 <FlexSpacer />
-                {this.renderMultiSwitch()}
+                {this.renderSkinSwitcher()}
             </FlexRow>
         );
     }

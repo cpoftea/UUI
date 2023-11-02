@@ -3,6 +3,7 @@ import { BadgeProps as UuiBadgeProps, Badge as UuiBadge } from '@epam/uui';
 import { EpamAdditionalColor } from '../types';
 
 export interface BadgeMods {
+    /** @default 'blue' */
     color?: EpamAdditionalColor | 'gray30';
 }
 

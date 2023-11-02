@@ -1,21 +1,25 @@
 import * as React from 'react';
 import {
-    Text, RichTextView, FlexRow, MultiSwitch, FlexSpacer, TabButton, LinkButton, ScrollBars,
+    RichTextView, FlexRow, MultiSwitch, FlexSpacer, TabButton, ScrollBars,
 } from '@epam/promo';
-import { ComponentEditor } from './ComponentEditor';
 import { svc } from '../../services';
 import { getQuery } from '../../helpers';
 import { analyticsEvents } from '../../analyticsEvents';
 import css from './BaseDocsBlock.module.scss';
 import { TDocsGenExportedType } from '../apiReference/types';
 import { TypeRefSection } from '../apiReference/TypeRefSection';
+import { convertToGenericFormat, TDocConfig, TSkin } from './docBuilderGen/types';
+import { ComponentEditorWrapper } from './componentEditor/ComponentEditor';
 
-export enum TSkin {
-    UUI3_loveship = 'UUI3_loveship',
-    UUI4_promo = 'UUI4_promo',
-    UUI = 'UUI'
+export { TSkin };
+
+enum TMode {
+    doc = 'doc',
+    propsEditor = 'propsEditor'
 }
+
 const DEFAULT_SKIN = TSkin.UUI4_promo;
+const DEFAULT_MODE = TMode.doc;
 
 export const UUI3 = TSkin.UUI3_loveship;
 export const UUI4 = TSkin.UUI4_promo;
@@ -44,6 +48,10 @@ export abstract class BaseDocsBlock extends React.Component<any, BaseDocsBlockSt
         return getQuery('skin') || DEFAULT_SKIN;
     }
 
+    private getMode(): TMode {
+        return getQuery('mode') || DEFAULT_MODE;
+    }
+
     abstract title: string;
     abstract renderContent(): React.ReactNode;
     protected getPropsDocPath(): DocPath {
@@ -54,67 +62,92 @@ export abstract class BaseDocsBlock extends React.Component<any, BaseDocsBlockSt
         return undefined;
     }
 
-    renderApiBlock() {
-        const docsGenType = this.getDocsGenType();
+    config: TDocConfig;
+
+    componentDidMount() {
+        this.handleMountOrUpdate();
+    }
+
+    componentDidUpdate() {
+        this.handleMountOrUpdate();
+    }
+
+    private handleMountOrUpdate = () => {
+        changeBodyTheme(this.getSkin());
+        if (this.getMode() === TMode.propsEditor && !this.isPropEditorSupported()) {
+            this.handleChangeMode(TMode.doc);
+        }
+    };
+
+    private renderApiBlock = () => {
+        let docsGenType = this.getDocsGenType();
+        if (!docsGenType) {
+            // API block is always based on the "UUI" TS type.
+            docsGenType = this.config ? convertToGenericFormat(this.config).bySkin[TSkin.UUI]?.type : undefined;
+        }
         if (docsGenType) {
             return (
                 <>
-                    <RichTextView>
-                        <h2>Api</h2>
-                    </RichTextView>
+                    { this.renderSectionTitle('Api') }
                     <TypeRefSection showCode={ true } typeRef={ docsGenType } />
                 </>
             );
         }
-    }
+    };
 
-    renderMultiSwitch() {
+    protected renderSkinSwitcher() {
         return (
             <MultiSwitch<TSkin>
                 size="36"
-                items={ items.filter((i) => (!window.location.host.includes('localhost') ? i.id !== TSkin.UUI : true)) }
+                items={ items.filter((i) => (!isLocalServer() ? i.id !== TSkin.UUI : true)) }
                 value={ this.getSkin() }
                 onValueChange={ (newValue: TSkin) => this.handleChangeSkin(newValue) }
             />
         );
     }
 
-    renderTabsNav() {
+    private renderTabsNav() {
         return (
             <FlexRow rawProps={ { role: 'tablist' } } background="white" padding="12" cx={ css.secondaryNavigation } borderBottom>
-                <TabButton size="60" caption="Documentation" isLinkActive={ getQuery('mode') === 'doc' } onClick={ () => this.handleChangeMode('doc') } />
-                <TabButton size="60" caption="Property Explorer" isLinkActive={ getQuery('mode') === 'propsEditor' } onClick={ () => this.handleChangeMode('propsEditor') } />
+                <TabButton
+                    size="60"
+                    caption="Documentation"
+                    isLinkActive={ this.getMode() === TMode.doc }
+                    onClick={ () => this.handleChangeMode(TMode.doc) }
+                />
+                <TabButton
+                    size="60"
+                    caption="Property Explorer"
+                    isLinkActive={ this.getMode() === TMode.propsEditor }
+                    onClick={ () => this.handleChangeMode(TMode.propsEditor) }
+                />
                 <FlexSpacer />
-                {getQuery('mode') !== 'doc' && this.renderMultiSwitch()}
+                {this.getMode() === TMode.propsEditor && this.renderSkinSwitcher()}
             </FlexRow>
         );
     }
 
-    renderPropEditor() {
-        this.handleChangeBodyTheme(getQuery('skin'));
-        if (!this.getPropsDocPath()) {
-            svc.uuiRouter.redirect({
-                pathname: '/documents',
-                query: {
-                    category: getQuery('category'),
-                    id: getQuery('id'),
-                    mode: getQuery('doc'),
-                    skin: getQuery('skin'),
-                },
-            });
-            return null;
-        }
-        const skin = getQuery('skin') as TSkin;
-        const propsDoc = this.getPropsDocPath()[skin];
-        if (!propsDoc) {
-            return this.renderNotSupportPropExplorer();
-        }
+    private isPropEditorSupported = () => {
+        const hasOldPropsDocPath = !!this.getPropsDocPath();
+        const hasNewDocConfig = !!this.config;
+        return hasNewDocConfig || hasOldPropsDocPath;
+    };
+
+    private renderPropsEditor() {
+        const skin = this.getSkin();
         return (
-            <ComponentEditor key={ propsDoc } propsDocPath={ propsDoc } title={ this.title } />
+            <ComponentEditorWrapper
+                onRedirectBackToDocs={ () => this.handleChangeMode(TMode.doc) }
+                oldConfig={ this.getPropsDocPath() }
+                config={ this.config }
+                title={ this.title }
+                skin={ skin }
+                docsGenType={ this.getDocsGenType() }
+            />
         );
     }
 
-    renderSectionTitle(title: string) {
+    protected renderSectionTitle(title: string) {
         return (
             <RichTextView>
                 <h2>{title}</h2>
@@ -122,7 +155,7 @@ export abstract class BaseDocsBlock extends React.Component<any, BaseDocsBlockSt
         );
     }
 
-    renderDocTitle() {
+    protected renderDocTitle() {
         return (
             <RichTextView>
                 <h1>{this.title}</h1>
@@ -130,7 +163,7 @@ export abstract class BaseDocsBlock extends React.Component<any, BaseDocsBlockSt
         );
     }
 
-    renderDoc() {
+    private renderDoc() {
         return (
             <ScrollBars>
                 <div className={ css.widthWrapper }>
@@ -142,75 +175,50 @@ export abstract class BaseDocsBlock extends React.Component<any, BaseDocsBlockSt
         );
     }
 
-    renderNotSupportPropExplorer() {
-        return (
-            <div className={ css.notSupport }>
-                <Text fontSize="16" lineHeight="24">
-                    This component does not support property explorer
-                </Text>
-                <LinkButton
-                    size="24"
-                    cx={ css.backButton }
-                    caption="Back to Docs"
-                    onClick={ () =>
-                        svc.uuiRouter.redirect({
-                            pathname: '/documents',
-                            query: {
-                                category: 'components',
-                                id: getQuery('id'),
-                                mode: 'doc',
-                                skin: getQuery('skin'),
-                            },
-                        }) }
-                />
-            </div>
-        );
-    }
-
-    handleChangeSkin(skin: TSkin) {
-        svc.uuiRouter.redirect({
-            pathname: '/documents',
-            query: {
-                category: getQuery('category'),
-                id: getQuery('id'),
-                mode: getQuery('mode'),
-                skin: skin,
-            },
-        });
-        this.handleChangeBodyTheme(skin);
-    }
-
-    handleChangeBodyTheme(skin: TSkin) {
-        const theme = document.body.classList.value.match(/uui-theme-(\S+)\s*/)[1];
-        if (theme === skin.split('_')[1]) return;
-        document.body.classList.remove(`uui-theme-${theme}`);
-        document.body.classList.add(`uui-theme-${skin === UUI3 ? 'loveship' : 'promo'}`);
-    }
-
     componentWillUnmount() {
-        this.handleChangeBodyTheme(TSkin.UUI4_promo);
+        changeBodyTheme(TSkin.UUI4_promo);
     }
 
-    handleChangeMode(mode: 'doc' | 'propsEditor') {
-        this.handleChangeBodyTheme(TSkin.UUI4_promo);
+    private handleChangeSkin(skin: TSkin) {
+        this.handleNav({ skin });
+    }
+
+    private handleChangeMode(mode: TMode) {
+        this.handleNav({ mode });
+    }
+
+    private handleNav = (params: { mode?: TMode, skin?: TSkin }) => {
+        const mode: TMode = params.mode ? params.mode : this.getMode();
+        const skin: TSkin = params.skin ? params.skin : this.getSkin();
 
         svc.uuiRouter.redirect({
             pathname: '/documents',
             query: {
                 category: 'components',
                 id: getQuery('id'),
-                mode: mode,
-                skin: getQuery('skin'),
+                mode,
+                skin,
             },
         });
-    }
+    };
 
     render() {
         return (
             <div className={ css.container }>
-                {this.getPropsDocPath() && this.renderTabsNav()}
-                {getQuery('mode') === 'propsEditor' ? this.renderPropEditor() : this.renderDoc()}
+                {this.isPropEditorSupported() && this.renderTabsNav()}
+                {this.getMode() === TMode.propsEditor ? this.renderPropsEditor() : this.renderDoc()}
             </div>
         );
     }
+}
+
+function isLocalServer() {
+    return window.location.host.includes('localhost');
+}
+
+function changeBodyTheme(skin: TSkin) {
+    const theme = document.body.classList.value.match(/uui-theme-(\S+)\s*/)[1];
+    if (theme === skin.split('_')[1]) return;
+    document.body.classList.remove(`uui-theme-${theme}`);
+    document.body.classList.add(`uui-theme-${skin === UUI3 ? 'loveship' : 'promo'}`);
 }

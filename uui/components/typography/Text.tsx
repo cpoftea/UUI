@@ -5,8 +5,17 @@ import { withMods } from '@epam/uui-core';
 import { getTextClasses, TextSettings } from '../../helpers/textLayout';
 
 export interface TextMods extends TextSettings {
+    /**
+     * @default '36'
+     */
     size?: types.TextSize | '42';
+    /**
+     * @default 'regular'
+     */
     font?: types.FontStyle;
+    /**
+     * @default 'primary'
+     */
     color?: 'info' | 'warning' | 'error' | 'success' | 'brand' | 'primary' | 'secondary' | 'disabled' | 'contrast' | 'white';
 }
 

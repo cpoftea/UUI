@@ -17,6 +17,9 @@ const mapSize = {
 export type TagSize = '18' | '24' | '30' | '36' | '42' | '48';
 
 export interface TagMods {
+    /**
+     * @default '36'
+     */
     size?: TagSize;
 }
 

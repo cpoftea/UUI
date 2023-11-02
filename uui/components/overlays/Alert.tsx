@@ -19,13 +19,18 @@ type notificationAction = {
 export interface AlertProps extends IHasChildren, IHasCX, IHasRawProps<React.HTMLAttributes<HTMLDivElement>> {
     /** List of actions to display in the alert. Each action has name and 'action' callback */
     actions?: notificationAction[];
-    /** Alert color */
+    /**
+     * Alert color
+     */
     color?: SemanticColor;
     /** When specified, a close icon is rendered. onClose callback will be called on clicking the close icon */
     onClose?(): void;
     /** An optional icon to show on the left of the alert */
     icon?: Icon;
-    /** Component size. If omitted, 48 size will be used. */
+    /**
+     * Component size. If omitted, 48 size will be used.
+     * @default '48'
+     */
     size?: '36' | '48';
 }
 

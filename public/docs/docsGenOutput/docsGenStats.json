@@ -1,8 +1,8 @@
 {
  "missingPropComment": {
   "totals": {
-   "amountProps": 864,
-   "amountTypes": 277
+   "amountProps": 834,
+   "amountTypes": 264
   },
   "value": [
    {
@@ -173,12 +173,6 @@
     ]
    },
    {
-    "typeRef": "@epam/uui-core:DataRowOptions",
-    "value": [
-     "pin"
-    ]
-   },
-   {
     "typeRef": "@epam/uui-core:DataRowPathItem",
     "value": [
      "id",
@@ -250,16 +244,9 @@
     "typeRef": "@epam/uui-core:DropdownProps",
     "value": [
      "boundaryElement",
-     "closeBodyOnTogglerHidden",
-     "closeDelay",
-     "closeOnClickOutside",
-     "closeOnMouseLeave",
-     "closeOnTargetClick",
      "isNotUnfoldable",
      "modifiers",
      "onClose",
-     "openOnClick",
-     "openOnHover",
      "placement",
      "portalTarget",
      "renderBody",
@@ -625,6 +612,7 @@
      "computeSubtotals",
      "filter",
      "forEach",
+     "forEachItem",
      "getById",
      "getChildren",
      "getChildrenByParentId",
@@ -1466,16 +1454,13 @@
    {
     "typeRef": "@epam/uui:AccordionMods",
     "value": [
-     "mode",
      "padding"
     ]
    },
    {
     "typeRef": "@epam/uui:BadgeMods",
     "value": [
-     "color",
-     "fill",
-     "size"
+     "color"
     ]
    },
    {
@@ -1489,14 +1474,6 @@
     "typeRef": "@epam/uui:BurgerGroupHeaderProps",
     "value": [
      "caption"
-    ]
-   },
-   {
-    "typeRef": "@epam/uui:ButtonMods",
-    "value": [
-     "color",
-     "mode",
-     "size"
     ]
    },
    {
@@ -1733,7 +1710,6 @@
    {
     "typeRef": "@epam/uui:MultiSwitchProps",
     "value": [
-     "color",
      "items"
     ]
    },
@@ -1866,28 +1842,8 @@
     ]
    },
    {
-    "typeRef": "@epam/uui:TagMods",
-    "value": [
-     "size"
-    ]
-   },
-   {
-    "typeRef": "@epam/uui:TextAreaMods",
-    "value": [
-     "size"
-    ]
-   },
-   {
     "typeRef": "@epam/uui:TextInputMods",
     "value": [
-     "size"
-    ]
-   },
-   {
-    "typeRef": "@epam/uui:TextMods",
-    "value": [
-     "color",
-     "font",
      "size"
     ]
    },
@@ -1915,22 +1871,9 @@
     ]
    },
    {
-    "typeRef": "@epam/promo:AlertMods",
-    "value": [
-     "color"
-    ]
-   },
-   {
-    "typeRef": "@epam/promo:BadgeMods",
-    "value": [
-     "color"
-    ]
-   },
-   {
     "typeRef": "@epam/promo:ButtonMods",
     "value": [
-     "color",
-     "fill"
+     "color"
     ]
    },
    {
@@ -1963,12 +1906,6 @@
     "value": [
      "height",
      "width"
-    ]
-   },
-   {
-    "typeRef": "@epam/promo:MultiSwitchMods",
-    "value": [
-     "color"
     ]
    },
    {
@@ -2016,34 +1953,9 @@
     ]
    },
    {
-    "typeRef": "@epam/promo:TextMods",
-    "value": [
-     "color",
-     "font"
-    ]
-   },
-   {
-    "typeRef": "@epam/loveship:AlertMods",
-    "value": [
-     "color"
-    ]
-   },
-   {
-    "typeRef": "@epam/loveship:BadgeMods",
-    "value": [
-     "color",
-     "fill",
-     "shape",
-     "size"
-    ]
-   },
-   {
     "typeRef": "@epam/loveship:ButtonMods",
     "value": [
-     "color",
-     "fill",
-     "shape",
-     "size"
+     "color"
     ]
    },
    {
@@ -2111,12 +2023,6 @@
     "value": [
      "height",
      "width"
-    ]
-   },
-   {
-    "typeRef": "@epam/loveship:MultiSwitchMods",
-    "value": [
-     "color"
     ]
    },
    {
@@ -2202,22 +2108,9 @@
     ]
    },
    {
-    "typeRef": "@epam/loveship:TagMods",
-    "value": [
-     "fill"
-    ]
-   },
-   {
     "typeRef": "@epam/loveship:TextInputMods",
     "value": [
      "size"
-    ]
-   },
-   {
-    "typeRef": "@epam/loveship:TextMods",
-    "value": [
-     "color",
-     "font"
     ]
    },
    {
@@ -2253,12 +2146,24 @@
     "value": [
      "data"
     ]
+   },
+   {
+    "typeRef": "@epam/uui-editor:ToolbarButtonProps",
+    "value": [
+     "caption",
+     "editor",
+     "icon",
+     "iconColor",
+     "isActive",
+     "isDisabled",
+     "onClick"
+    ]
    }
   ]
  },
  "missingTypeComment": {
   "totals": {
-   "amountTypes": 465
+   "amountTypes": 466
   },
   "value": [
    "@epam/uui-core:AcceptDropParams",
@@ -2286,7 +2191,6 @@
    "@epam/uui-core:ButtonSemanticProps",
    "@epam/uui-core:CascadeSelection",
    "@epam/uui-core:CheckboxCoreProps",
-   "@epam/uui-core:ClassValue",
    "@epam/uui-core:ColumnsConfig",
    "@epam/uui-core:CommonContexts",
    "@epam/uui-core:ContextProviderProps",
@@ -2316,7 +2220,6 @@
    "@epam/uui-core:DropdownProps",
    "@epam/uui-core:DropdownState",
    "@epam/uui-core:DropParams",
-   "@epam/uui-core:DropPosition",
    "@epam/uui-core:FileUploadOptions",
    "@epam/uui-core:FileUploadResponse",
    "@epam/uui-core:FilterPredicate",
@@ -2493,7 +2396,6 @@
    "@epam/uui-components:UsePickerInputProps",
    "@epam/uui-components:UsePickerListProps",
    "@epam/uui-components:UsePickerModalProps",
-   "@epam/uui-components:ViewType",
    "@epam/uui-components:YearSelectionProps",
    "@epam/uui:AccordionMods",
    "@epam/uui:AccordionProps",
@@ -2626,6 +2528,7 @@
    "@epam/promo:ControlShape",
    "@epam/promo:ControlSize",
    "@epam/promo:DropdownContainerMods",
+   "@epam/promo:DropdownContainerProps",
    "@epam/promo:EpamAdditionalColor",
    "@epam/promo:EpamColor",
    "@epam/promo:EpamGrayscaleColor",
@@ -2674,6 +2577,7 @@
    "@epam/loveship:ControlShape",
    "@epam/loveship:ControlSize",
    "@epam/loveship:DropdownContainerMods",
+   "@epam/loveship:DropdownContainerProps",
    "@epam/loveship:EpamAdditionalColor",
    "@epam/loveship:EpamColor",
    "@epam/loveship:EpamGrayscaleColor",
@@ -2712,6 +2616,7 @@
    "@epam/loveship:SnackbarCardProps",
    "@epam/loveship:TabButtonMods",
    "@epam/loveship:TagMods",
+   "@epam/loveship:TagProps",
    "@epam/loveship:TextInputMods",
    "@epam/loveship:TextMods",
    "@epam/loveship:TextProps",
@@ -2725,19 +2630,20 @@
    "@epam/uui-editor:PlaceholderPluginParams",
    "@epam/uui-editor:PlateImgAlign",
    "@epam/uui-editor:SlateImageSize",
-   "@epam/uui-editor:SlateImgAlign"
+   "@epam/uui-editor:SlateImgAlign",
+   "@epam/uui-editor:ToolbarButtonProps"
   ]
  },
  "ignoredExports": {
   "totals": {
-   "allExports": 713,
+   "allExports": 714,
    "byModule": {
     "@epam/uui-core": 132,
     "@epam/uui-components": 105,
     "@epam/uui": 148,
     "@epam/promo": 127,
     "@epam/loveship": 139,
-    "@epam/uui-editor": 62
+    "@epam/uui-editor": 63
    }
   },
   "value": {
@@ -3475,6 +3381,7 @@
      "tablePlugin",
      "TODO_ELEMENT_KEY",
      "toDoListPlugin",
+     "ToolbarButton",
      "uploadFilePlugin",
      "VIDEO_PLUGIN_KEY",
      "videoPlugin"
@@ -3510,14 +3417,14 @@
  },
  "includedExports": {
   "totals": {
-   "allExports": 538,
+   "allExports": 542,
    "byModule": {
     "@epam/uui-core": 205,
     "@epam/uui-components": 92,
     "@epam/uui": 127,
-    "@epam/promo": 48,
-    "@epam/loveship": 57,
-    "@epam/uui-editor": 9
+    "@epam/promo": 49,
+    "@epam/loveship": 59,
+    "@epam/uui-editor": 10
    }
   },
   "value": {
@@ -3998,6 +3905,7 @@
      "ButtonProps",
      "ControlShape",
      "ControlSize",
+     "DropdownContainerProps",
      "EpamAdditionalColor",
      "EpamColor",
      "EpamGrayscaleColor",
@@ -4052,6 +3960,7 @@
      "SnackbarCardProps",
      "TabButtonMods",
      "TagMods",
+     "TagProps",
      "TextInputMods",
      "TextMods",
      "TooltipMods",
@@ -4063,6 +3972,7 @@
      "ButtonProps",
      "ControlShape",
      "ControlSize",
+     "DropdownContainerProps",
      "EpamAdditionalColor",
      "EpamColor",
      "EpamGrayscaleColor",
@@ -4092,7 +4002,8 @@
      "LinkElement",
      "PlaceholderPluginParams",
      "PlateProps",
-     "SlateProps"
+     "SlateProps",
+     "ToolbarButtonProps"
     ]
    }
   }

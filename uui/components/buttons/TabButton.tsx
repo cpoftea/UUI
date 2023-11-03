@@ -5,6 +5,9 @@ import { getIconClass } from './helper';
 import css from './TabButton.module.scss';
 
 export interface TabButtonMods {
+    /**
+     * @default '48'
+     */
     size?: '36' | '48' | '60';
     withNotify?: boolean;
 }

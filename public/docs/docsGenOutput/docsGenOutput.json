@@ -67001,6 +67001,9 @@
      "raw": "IconButtonMods",
      "print": [
       "interface IconButtonMods {",
+      "    /**",
+      "     * @default 'default'",
+      "     */",
       "    color?: IconColor;",
       "}"
      ]
@@ -67009,6 +67012,14 @@
      {
       "uid": 1,
       "name": "color",
+      "comment": {
+       "raw": [
+        "@default 'default'"
+       ],
+       "tags": {
+        "@default": "default"
+       }
+      },
       "typeValue": {
        "raw": "'info' | 'success' | 'warning' | 'error' | 'default' | 'secondary'"
       },
@@ -67284,6 +67295,14 @@
      {
       "uid": 15,
       "name": "color",
+      "comment": {
+       "raw": [
+        "@default 'default'"
+       ],
+       "tags": {
+        "@default": "default"
+       }
+      },
       "typeValue": {
        "raw": "'info' | 'success' | 'warning' | 'error' | 'default' | 'secondary'"
       },
@@ -78774,6 +78793,9 @@
      "raw": "TabButtonMods",
      "print": [
       "interface TabButtonMods {",
+      "    /**",
+      "     * @default '48'",
+      "     */",
       "    size?: '36' | '48' | '60';",
       "    withNotify?: boolean;",
       "}"
@@ -78783,6 +78805,14 @@
      {
       "uid": 1,
       "name": "size",
+      "comment": {
+       "raw": [
+        "@default '48'"
+       ],
+       "tags": {
+        "@default": "48"
+       }
+      },
       "typeValue": {
        "raw": "'36' | '48' | '60'"
       },
@@ -78833,6 +78863,14 @@
      {
       "uid": 1,
       "name": "size",
+      "comment": {
+       "raw": [
+        "@default '48'"
+       ],
+       "tags": {
+        "@default": "48"
+       }
+      },
       "typeValue": {
        "raw": "'36' | '48' | '60'"
       },
@@ -82077,7 +82115,10 @@
      "raw": "TooltipMods",
      "print": [
       "interface TooltipMods {",
-      "    /** Tooltip color */",
+      "    /**",
+      "     * Tooltip color",
+      "     * @default 'contrast'",
+      "     */",
       "    color?: 'default' | 'contrast' | 'critical';",
       "}"
      ]
@@ -82088,8 +82129,12 @@
       "name": "color",
       "comment": {
        "raw": [
-        "Tooltip color"
-       ]
+        "Tooltip color",
+        " @default 'contrast'"
+       ],
+       "tags": {
+        "@default": "contrast"
+       }
       },
       "typeValue": {
        "raw": "'default' | 'contrast' | 'critical'"
@@ -82522,8 +82567,12 @@
       "name": "color",
       "comment": {
        "raw": [
-        "Tooltip color"
-       ]
+        "Tooltip color",
+        " @default 'contrast'"
+       ],
+       "tags": {
+        "@default": "contrast"
+       }
       },
       "typeValue": {
        "raw": "'default' | 'contrast' | 'critical'"
@@ -83037,6 +83086,14 @@
      {
       "uid": 29,
       "name": "size",
+      "comment": {
+       "raw": [
+        "@default '48'"
+       ],
+       "tags": {
+        "@default": "48"
+       }
+      },
       "typeValue": {
        "raw": "'36' | '48' | '60'"
       },
@@ -86024,6 +86081,9 @@
      "raw": "IconButtonMods",
      "print": [
       "interface IconButtonMods {",
+      "    /**",
+      "     * @default 'gray60'",
+      "     */",
       "    color?: IconColor;",
       "}"
      ]
@@ -86032,6 +86092,14 @@
      {
       "uid": 1,
       "name": "color",
+      "comment": {
+       "raw": [
+        "@default 'gray60'"
+       ],
+       "tags": {
+        "@default": "gray60"
+       }
+      },
       "typeValue": {
        "raw": "'blue' | 'green' | 'amber' | 'red' | 'gray30' | 'gray50' | 'gray60'"
       },
@@ -86306,6 +86374,14 @@
      {
       "uid": 15,
       "name": "color",
+      "comment": {
+       "raw": [
+        "@default 'gray60'"
+       ],
+       "tags": {
+        "@default": "gray60"
+       }
+      },
       "typeValue": {
        "raw": "'blue' | 'green' | 'amber' | 'red' | 'gray30' | 'gray50' | 'gray60'"
       },
@@ -86384,9 +86460,11 @@
      "raw": "IconContainerMods",
      "print": [
       "interface IconContainerMods {",
-      "    /** IconContainer color.",
+      "    /**",
+      "     *  IconContainer color.",
       "     *  @deprecated Property color is deprecated and will be removed in future release. Please make icon color configuration by yourself, e.g. via cx or style prop.",
-      "     * */",
+      "     *  @default 'gray60'",
+      "     */",
       "    color?: IconContainerColors;",
       "}"
      ]
@@ -86398,8 +86476,12 @@
       "comment": {
        "raw": [
         "IconContainer color.",
-        "  @deprecated Property color is deprecated and will be removed in future release. Please make icon color configuration by yourself, e.g. via cx or style prop."
-       ]
+        "  @deprecated Property color is deprecated and will be removed in future release. Please make icon color configuration by yourself, e.g. via cx or style prop.",
+        "  @default 'gray60'"
+       ],
+       "tags": {
+        "@default": "gray60"
+       }
       },
       "typeValue": {
        "raw": "'blue' | 'green' | 'amber' | 'red' | 'cyan' | 'orange' | 'purple' | 'violet' | 'gray30' | 'gray50' | 'white' | 'gray5' | 'gray10' | 'gray20' | 'gray40' | 'gray60' | 'gray70' | 'gray80' | 'gray90'"
@@ -86428,6 +86510,240 @@
         "white"
        ]
       },
+      "required": false
+     }
+    ],
+    "propsFromUnion": false
+   }
+  },
+  "@epam/promo:IconContainerProps": {
+   "summary": {
+    "module": "@epam/promo",
+    "typeName": {
+     "name": "IconContainerProps",
+     "nameFull": "IconContainerProps"
+    },
+    "src": "epam-promo/components/layout/IconContainer.tsx",
+    "exported": true
+   },
+   "details": {
+    "kind": 264,
+    "typeValue": {
+     "raw": "IconContainerProps",
+     "print": [
+      "type IconContainerProps = ControlIconProps & IconContainerMods;"
+     ]
+    },
+    "props": [
+     {
+      "uid": 1,
+      "name": "icon",
+      "comment": {
+       "raw": [
+        "Icon to display"
+       ]
+      },
+      "typeValue": {
+       "raw": "Icon"
+      },
+      "editor": {
+       "type": "component"
+      },
+      "from": "@epam/uui-components:ControlIconProps",
+      "required": false
+     },
+     {
+      "uid": 2,
+      "name": "flipY",
+      "comment": {
+       "raw": [
+        "Flips the icon vertically"
+       ]
+      },
+      "typeValue": {
+       "raw": "boolean"
+      },
+      "editor": {
+       "type": "bool"
+      },
+      "from": "@epam/uui-components:ControlIconProps",
+      "required": false
+     },
+     {
+      "uid": 3,
+      "name": "rotate",
+      "comment": {
+       "raw": [
+        "Rotate the icon (cw stands for 'clock-wise', ccw stands for 'counter clock-wise))"
+       ]
+      },
+      "typeValue": {
+       "raw": "'0' | '90cw' | '180' | '90ccw'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "0",
+        "180",
+        "90ccw",
+        "90cw"
+       ]
+      },
+      "from": "@epam/uui-components:ControlIconProps",
+      "required": false
+     },
+     {
+      "uid": 4,
+      "name": "onClick",
+      "comment": {
+       "raw": [
+        "Click handler"
+       ]
+      },
+      "typeValue": {
+       "raw": "(e: React.SyntheticEvent<HTMLDivElement, Event>) => void"
+      },
+      "editor": {
+       "type": "func"
+      },
+      "from": "@epam/uui-components:ControlIconProps",
+      "required": false
+     },
+     {
+      "uid": 5,
+      "name": "style",
+      "comment": {
+       "raw": [
+        "CSS style prop to put on the component"
+       ]
+      },
+      "typeValue": {
+       "raw": "React.CSSProperties"
+      },
+      "from": "@epam/uui-components:ControlIconProps",
+      "required": false
+     },
+     {
+      "uid": 6,
+      "name": "size",
+      "comment": {
+       "raw": [
+        "Icon size in pixels (both width and height, as icons are assumed to be square-shaped)"
+       ]
+      },
+      "typeValue": {
+       "raw": "number"
+      },
+      "editor": {
+       "type": "number"
+      },
+      "from": "@epam/uui-components:ControlIconProps",
+      "required": false
+     },
+     {
+      "uid": 7,
+      "name": "cx",
+      "comment": {
+       "raw": [
+        "CSS class(es) to put on component's root. See {@link https://github.com/JedWatson/classnames#usage} for details"
+       ]
+      },
+      "typeValue": {
+       "raw": "null | string | number | boolean | ClassDictionary | ClassArray"
+      },
+      "typeValueRef": "@epam/uui-core:ClassValue",
+      "from": "@epam/uui-core:IHasCX",
+      "required": false
+     },
+     {
+      "uid": 8,
+      "name": "isDisabled",
+      "comment": {
+       "raw": [
+        "Disable editing, and visually de-emphasize value of the component"
+       ]
+      },
+      "typeValue": {
+       "raw": "boolean"
+      },
+      "editor": {
+       "type": "bool"
+      },
+      "from": "@epam/uui-core:IDisableable",
+      "required": false
+     },
+     {
+      "uid": 9,
+      "name": "rawProps",
+      "comment": {
+       "raw": [
+        "Any HTML attributes (native or 'data-') to put on the underlying component"
+       ]
+      },
+      "typeValue": {
+       "raw": "React.HTMLAttributes<HTMLDivElement> & Record<`data-${string}`, string>"
+      },
+      "from": "@epam/uui-core:IHasRawProps",
+      "required": false
+     },
+     {
+      "uid": 10,
+      "name": "tabIndex",
+      "comment": {
+       "raw": [
+        "Controls the order of keyboard navigation between components"
+       ]
+      },
+      "typeValue": {
+       "raw": "number"
+      },
+      "editor": {
+       "type": "number"
+      },
+      "from": "@epam/uui-core:IHasTabIndex",
+      "required": false
+     },
+     {
+      "uid": 11,
+      "name": "color",
+      "comment": {
+       "raw": [
+        "IconContainer color.",
+        "  @deprecated Property color is deprecated and will be removed in future release. Please make icon color configuration by yourself, e.g. via cx or style prop.",
+        "  @default 'gray60'"
+       ],
+       "tags": {
+        "@default": "gray60"
+       }
+      },
+      "typeValue": {
+       "raw": "'blue' | 'green' | 'amber' | 'red' | 'cyan' | 'orange' | 'purple' | 'violet' | 'gray30' | 'gray50' | 'white' | 'gray5' | 'gray10' | 'gray20' | 'gray40' | 'gray60' | 'gray70' | 'gray80' | 'gray90'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "amber",
+        "blue",
+        "cyan",
+        "gray10",
+        "gray20",
+        "gray30",
+        "gray40",
+        "gray5",
+        "gray50",
+        "gray60",
+        "gray70",
+        "gray80",
+        "gray90",
+        "green",
+        "orange",
+        "purple",
+        "red",
+        "violet",
+        "white"
+       ]
+      },
+      "from": "@epam/promo:IconContainerMods",
       "required": false
      }
     ],
@@ -88403,9 +88719,11 @@
      "raw": "TooltipMods",
      "print": [
       "interface TooltipMods {",
-      "    /** Tooltip color.",
-      "     *  'gray90' is deprecated and will be removed in future release, use 'gray' instead.",
-      "     * */",
+      "    /**",
+      "     * Tooltip color.",
+      "     * 'gray90' is deprecated and will be removed in future release, use 'gray' instead.",
+      "     * @default 'gray'",
+      "     */",
       "    color?: 'white' | 'gray90' | 'gray' | 'red';",
       "}"
      ]
@@ -88417,8 +88735,12 @@
       "comment": {
        "raw": [
         "Tooltip color.",
-        "  'gray90' is deprecated and will be removed in future release, use 'gray' instead."
-       ]
+        " 'gray90' is deprecated and will be removed in future release, use 'gray' instead.",
+        " @default 'gray'"
+       ],
+       "tags": {
+        "@default": "gray"
+       }
       },
       "typeValue": {
        "raw": "'red' | 'gray' | 'white' | 'gray90'"
@@ -88851,8 +89173,12 @@
       "comment": {
        "raw": [
         "Tooltip color.",
-        "  'gray90' is deprecated and will be removed in future release, use 'gray' instead."
-       ]
+        " 'gray90' is deprecated and will be removed in future release, use 'gray' instead.",
+        " @default 'gray'"
+       ],
+       "tags": {
+        "@default": "gray"
+       }
       },
       "typeValue": {
        "raw": "'red' | 'gray' | 'white' | 'gray90'"
@@ -91833,6 +92159,9 @@
      "raw": "IconButtonMods",
      "print": [
       "interface IconButtonMods {",
+      "    /**",
+      "     * @default 'night600'",
+      "     */",
       "    color?: EpamPrimaryColor | EpamAdditionalColor | 'white' | 'night200' | 'night300' | 'night400' | 'night500' | 'night600';",
       "}"
      ]
@@ -91841,6 +92170,14 @@
      {
       "uid": 1,
       "name": "color",
+      "comment": {
+       "raw": [
+        "@default 'night600'"
+       ],
+       "tags": {
+        "@default": "night600"
+       }
+      },
       "typeValue": {
        "raw": "'sky' | 'grass' | 'sun' | 'fire' | 'cobalt' | 'lavanda' | 'fuchsia' | 'white' | 'night200' | 'night300' | 'night400' | 'night500' | 'night600'"
       },
@@ -92121,6 +92458,14 @@
      {
       "uid": 15,
       "name": "color",
+      "comment": {
+       "raw": [
+        "@default 'night600'"
+       ],
+       "tags": {
+        "@default": "night600"
+       }
+      },
       "typeValue": {
        "raw": "'sky' | 'grass' | 'sun' | 'fire' | 'cobalt' | 'lavanda' | 'fuchsia' | 'white' | 'night200' | 'night300' | 'night400' | 'night500' | 'night600'"
       },
@@ -92165,9 +92510,11 @@
      "raw": "IconContainerMods",
      "print": [
       "interface IconContainerMods {",
-      "    /** IconContainer color.",
-      "     *  @deprecated Property color is deprecated and will be removed in future release. Please make icon color configuration by yourself, e.g. via cx or style prop.",
-      "     * */",
+      "    /**",
+      "     * IconContainer color.",
+      "     * @deprecated Property color is deprecated and will be removed in future release. Please make icon color configuration by yourself, e.g. via cx or style prop.",
+      "     * @default 'night600'",
+      "     */",
       "    color?: 'sky' | 'grass' | 'sun' | 'fire' | 'carbon' | 'cobalt' | 'lavanda' | 'fuchsia' | 'white' | 'night50' | 'night100' | 'night200' | 'night300' | 'night400' | 'night500' | 'night600' | 'night700' | 'night800' | 'night900';",
       "}"
      ]
@@ -92179,8 +92526,12 @@
       "comment": {
        "raw": [
         "IconContainer color.",
-        "  @deprecated Property color is deprecated and will be removed in future release. Please make icon color configuration by yourself, e.g. via cx or style prop."
-       ]
+        " @deprecated Property color is deprecated and will be removed in future release. Please make icon color configuration by yourself, e.g. via cx or style prop.",
+        " @default 'night600'"
+       ],
+       "tags": {
+        "@default": "night600"
+       }
       },
       "typeValue": {
        "raw": "'sky' | 'grass' | 'sun' | 'fire' | 'cobalt' | 'lavanda' | 'fuchsia' | 'white' | 'night200' | 'night300' | 'night400' | 'night500' | 'night600' | 'night50' | 'night100' | 'night700' | 'night800' | 'night900' | 'carbon'"
@@ -92209,6 +92560,240 @@
         "white"
        ]
       },
+      "required": false
+     }
+    ],
+    "propsFromUnion": false
+   }
+  },
+  "@epam/loveship:IconContainerProps": {
+   "summary": {
+    "module": "@epam/loveship",
+    "typeName": {
+     "name": "IconContainerProps",
+     "nameFull": "IconContainerProps"
+    },
+    "src": "loveship/components/layout/IconContainer.tsx",
+    "exported": true
+   },
+   "details": {
+    "kind": 264,
+    "typeValue": {
+     "raw": "IconContainerProps",
+     "print": [
+      "type IconContainerProps = ControlIconProps & IconContainerMods;"
+     ]
+    },
+    "props": [
+     {
+      "uid": 1,
+      "name": "icon",
+      "comment": {
+       "raw": [
+        "Icon to display"
+       ]
+      },
+      "typeValue": {
+       "raw": "Icon"
+      },
+      "editor": {
+       "type": "component"
+      },
+      "from": "@epam/uui-components:ControlIconProps",
+      "required": false
+     },
+     {
+      "uid": 2,
+      "name": "flipY",
+      "comment": {
+       "raw": [
+        "Flips the icon vertically"
+       ]
+      },
+      "typeValue": {
+       "raw": "boolean"
+      },
+      "editor": {
+       "type": "bool"
+      },
+      "from": "@epam/uui-components:ControlIconProps",
+      "required": false
+     },
+     {
+      "uid": 3,
+      "name": "rotate",
+      "comment": {
+       "raw": [
+        "Rotate the icon (cw stands for 'clock-wise', ccw stands for 'counter clock-wise))"
+       ]
+      },
+      "typeValue": {
+       "raw": "'0' | '90cw' | '180' | '90ccw'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "0",
+        "180",
+        "90ccw",
+        "90cw"
+       ]
+      },
+      "from": "@epam/uui-components:ControlIconProps",
+      "required": false
+     },
+     {
+      "uid": 4,
+      "name": "onClick",
+      "comment": {
+       "raw": [
+        "Click handler"
+       ]
+      },
+      "typeValue": {
+       "raw": "(e: React.SyntheticEvent<HTMLDivElement, Event>) => void"
+      },
+      "editor": {
+       "type": "func"
+      },
+      "from": "@epam/uui-components:ControlIconProps",
+      "required": false
+     },
+     {
+      "uid": 5,
+      "name": "style",
+      "comment": {
+       "raw": [
+        "CSS style prop to put on the component"
+       ]
+      },
+      "typeValue": {
+       "raw": "React.CSSProperties"
+      },
+      "from": "@epam/uui-components:ControlIconProps",
+      "required": false
+     },
+     {
+      "uid": 6,
+      "name": "size",
+      "comment": {
+       "raw": [
+        "Icon size in pixels (both width and height, as icons are assumed to be square-shaped)"
+       ]
+      },
+      "typeValue": {
+       "raw": "number"
+      },
+      "editor": {
+       "type": "number"
+      },
+      "from": "@epam/uui-components:ControlIconProps",
+      "required": false
+     },
+     {
+      "uid": 7,
+      "name": "cx",
+      "comment": {
+       "raw": [
+        "CSS class(es) to put on component's root. See {@link https://github.com/JedWatson/classnames#usage} for details"
+       ]
+      },
+      "typeValue": {
+       "raw": "null | string | number | boolean | ClassDictionary | ClassArray"
+      },
+      "typeValueRef": "@epam/uui-core:ClassValue",
+      "from": "@epam/uui-core:IHasCX",
+      "required": false
+     },
+     {
+      "uid": 8,
+      "name": "isDisabled",
+      "comment": {
+       "raw": [
+        "Disable editing, and visually de-emphasize value of the component"
+       ]
+      },
+      "typeValue": {
+       "raw": "boolean"
+      },
+      "editor": {
+       "type": "bool"
+      },
+      "from": "@epam/uui-core:IDisableable",
+      "required": false
+     },
+     {
+      "uid": 9,
+      "name": "rawProps",
+      "comment": {
+       "raw": [
+        "Any HTML attributes (native or 'data-') to put on the underlying component"
+       ]
+      },
+      "typeValue": {
+       "raw": "React.HTMLAttributes<HTMLDivElement> & Record<`data-${string}`, string>"
+      },
+      "from": "@epam/uui-core:IHasRawProps",
+      "required": false
+     },
+     {
+      "uid": 10,
+      "name": "tabIndex",
+      "comment": {
+       "raw": [
+        "Controls the order of keyboard navigation between components"
+       ]
+      },
+      "typeValue": {
+       "raw": "number"
+      },
+      "editor": {
+       "type": "number"
+      },
+      "from": "@epam/uui-core:IHasTabIndex",
+      "required": false
+     },
+     {
+      "uid": 11,
+      "name": "color",
+      "comment": {
+       "raw": [
+        "IconContainer color.",
+        " @deprecated Property color is deprecated and will be removed in future release. Please make icon color configuration by yourself, e.g. via cx or style prop.",
+        " @default 'night600'"
+       ],
+       "tags": {
+        "@default": "night600"
+       }
+      },
+      "typeValue": {
+       "raw": "'sky' | 'grass' | 'sun' | 'fire' | 'cobalt' | 'lavanda' | 'fuchsia' | 'white' | 'night200' | 'night300' | 'night400' | 'night500' | 'night600' | 'night50' | 'night100' | 'night700' | 'night800' | 'night900' | 'carbon'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "carbon",
+        "cobalt",
+        "fire",
+        "fuchsia",
+        "grass",
+        "lavanda",
+        "night100",
+        "night200",
+        "night300",
+        "night400",
+        "night50",
+        "night500",
+        "night600",
+        "night700",
+        "night800",
+        "night900",
+        "sky",
+        "sun",
+        "white"
+       ]
+      },
+      "from": "@epam/loveship:IconContainerMods",
       "required": false
      }
     ],
@@ -95155,6 +95740,14 @@
      {
       "uid": 2,
       "name": "size",
+      "comment": {
+       "raw": [
+        "@default '48'"
+       ],
+       "tags": {
+        "@default": "48"
+       }
+      },
       "typeValue": {
        "raw": "'36' | '48' | '60'"
       },
@@ -96675,9 +97268,12 @@
      "raw": "TooltipMods",
      "print": [
       "interface TooltipMods {",
-      "    /** Tooltip color.",
-      "     *  'night900' is deprecated and will be removed in future release, use 'gray' instead.",
-      "     * */",
+      "    /**",
+      "     * Tooltip color.",
+      "     * 'night900' is deprecated and will be removed in future release, use 'gray' instead.",
+      "     *",
+      "     * @default 'gray'",
+      "     */",
       "    color?: 'white' | 'fire' | 'gray' | 'night900';",
       "}"
      ]
@@ -96689,8 +97285,13 @@
       "comment": {
        "raw": [
         "Tooltip color.",
-        "  'night900' is deprecated and will be removed in future release, use 'gray' instead."
-       ]
+        " 'night900' is deprecated and will be removed in future release, use 'gray' instead.",
+        "",
+        " @default 'gray'"
+       ],
+       "tags": {
+        "@default": "gray"
+       }
       },
       "typeValue": {
        "raw": "'fire' | 'white' | 'gray' | 'night900'"
@@ -97123,8 +97724,13 @@
       "comment": {
        "raw": [
         "Tooltip color.",
-        "  'night900' is deprecated and will be removed in future release, use 'gray' instead."
-       ]
+        " 'night900' is deprecated and will be removed in future release, use 'gray' instead.",
+        "",
+        " @default 'gray'"
+       ],
+       "tags": {
+        "@default": "gray"
+       }
       },
       "typeValue": {
        "raw": "'fire' | 'white' | 'gray' | 'night900'"

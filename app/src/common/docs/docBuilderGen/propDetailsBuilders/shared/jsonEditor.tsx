@@ -11,7 +11,7 @@ export function JsonEditor(props: { value: any, onValueChange: (newValue: any) =
         validateInput: (i) => {
             let isValid;
             try {
-                JSON.parse(i);
+                i && JSON.parse(i);
                 isValid = true;
             } catch {
                 isValid = false;

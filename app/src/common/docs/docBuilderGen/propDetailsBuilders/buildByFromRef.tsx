@@ -64,8 +64,16 @@ const COMMON_DOCS: Record<TTypeRef | TDocsGenExportedType, (skin?: TSkin) => Doc
     },
     '@epam/uui-core:ICanBeInvalid': () => new DocBuilder<ICanBeInvalid>({ name: 'isInvalid' })
         .prop('isInvalid', { examples: [true] })
-        .prop('validationProps', { examples: [{ name: '{}', value: {} }] })
-        .prop('validationMessage', { examples: [{ value: 'This field is mandatory' }] }),
+        .prop('validationProps', {
+            renderEditor: JsonEditor,
+            examples: [],
+        })
+        .prop('validationMessage', {
+            examples: [
+                { name: 'String', value: 'This field is mandatory' },
+                { name: 'ReactElement', value: (<b>This field is mandatory</b>) },
+            ],
+        }),
     '@epam/uui-core:IAnalyticableClick': () => new DocBuilder<IAnalyticableClick>({ name: '' })
         .prop('clickAnalyticsEvent', {
             examples: [

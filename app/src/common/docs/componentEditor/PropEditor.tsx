@@ -88,6 +88,7 @@ function ExamplesCustom(props: TExampleProps) {
         // eslint-disable-next-line react/jsx-no-useless-fragment
         <>
             {node}
+            <PropDescription description={ prop.description } />
         </>
     );
 }

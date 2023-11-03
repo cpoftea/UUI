@@ -1,8 +1,8 @@
 {
  "missingPropComment": {
   "totals": {
-   "amountProps": 831,
-   "amountTypes": 263
+   "amountProps": 827,
+   "amountTypes": 260
   },
   "value": [
    {
@@ -1642,12 +1642,6 @@
     ]
    },
    {
-    "typeRef": "@epam/uui:IconButtonMods",
-    "value": [
-     "color"
-    ]
-   },
-   {
     "typeRef": "@epam/uui:IDropdownMenuContainer",
     "value": [
      "closeOnKey"
@@ -1837,7 +1831,6 @@
    {
     "typeRef": "@epam/uui:TabButtonMods",
     "value": [
-     "size",
      "withNotify"
     ]
    },
@@ -1887,12 +1880,6 @@
     "value": [
      "getErrorInfo",
      "onNotificationError"
-    ]
-   },
-   {
-    "typeRef": "@epam/promo:IconButtonMods",
-    "value": [
-     "color"
     ]
    },
    {
@@ -1982,12 +1969,6 @@
     "typeRef": "@epam/loveship:FontMod",
     "value": [
      "font"
-    ]
-   },
-   {
-    "typeRef": "@epam/loveship:IconButtonMods",
-    "value": [
-     "color"
     ]
    },
    {
@@ -2155,7 +2136,7 @@
  },
  "missingTypeComment": {
   "totals": {
-   "amountTypes": 466
+   "amountTypes": 468
   },
   "value": [
    "@epam/uui-core:AcceptDropParams",
@@ -2535,6 +2516,7 @@
    "@epam/promo:IconColor",
    "@epam/promo:IconContainerColors",
    "@epam/promo:IconContainerMods",
+   "@epam/promo:IconContainerProps",
    "@epam/promo:LinkButtonMods",
    "@epam/promo:LinkButtonProps",
    "@epam/promo:ModalWindowMods",
@@ -2583,6 +2565,7 @@
    "@epam/loveship:IconButtonMods",
    "@epam/loveship:IconButtonProps",
    "@epam/loveship:IconContainerMods",
+   "@epam/loveship:IconContainerProps",
    "@epam/loveship:LinkButtonMods",
    "@epam/loveship:LinkButtonProps",
    "@epam/loveship:MakeMeItemProps",
@@ -3409,13 +3392,13 @@
  },
  "includedExports": {
   "totals": {
-   "allExports": 544,
+   "allExports": 546,
    "byModule": {
     "@epam/uui-core": 205,
     "@epam/uui-components": 92,
     "@epam/uui": 127,
-    "@epam/promo": 50,
-    "@epam/loveship": 60,
+    "@epam/promo": 51,
+    "@epam/loveship": 61,
     "@epam/uui-editor": 10
    }
   },
@@ -3908,6 +3891,7 @@
      "IconButtonProps",
      "IconColor",
      "IconContainerColors",
+     "IconContainerProps",
      "LinkButtonProps",
      "MultiSwitchColor",
      "MultiSwitchProps",
@@ -3974,6 +3958,7 @@
      "FlexRowProps",
      "FontStyle",
      "IconButtonProps",
+     "IconContainerProps",
      "LinkButtonProps",
      "MultiSwitchColor",
      "MultiSwitchProps",

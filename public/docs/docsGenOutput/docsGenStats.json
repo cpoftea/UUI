@@ -1,8 +1,8 @@
 {
  "missingPropComment": {
   "totals": {
-   "amountProps": 823,
-   "amountTypes": 257
+   "amountProps": 819,
+   "amountTypes": 256
   },
   "value": [
    {
@@ -1823,12 +1823,6 @@
     ]
    },
    {
-    "typeRef": "@epam/uui:SwitchMods",
-    "value": [
-     "size"
-    ]
-   },
-   {
     "typeRef": "@epam/uui:TabButtonMods",
     "value": [
      "withNotify"
@@ -2046,13 +2040,10 @@
    {
     "typeRef": "@epam/loveship:SliderRatingProps",
     "value": [
-     "from",
      "getHandlerIcon",
      "getScaleIcon",
      "renderTooltip",
-     "size",
-     "tooltipColor",
-     "withoutNa"
+     "tooltipColor"
     ]
    },
    {
@@ -2117,7 +2108,7 @@
  },
  "missingTypeComment": {
   "totals": {
-   "amountTypes": 469
+   "amountTypes": 470
   },
   "value": [
    "@epam/uui-core:AcceptDropParams",
@@ -2572,6 +2563,7 @@
    "@epam/loveship:SliderRatingProps",
    "@epam/loveship:SnackbarCardProps",
    "@epam/loveship:TabButtonMods",
+   "@epam/loveship:TabButtonProps",
    "@epam/loveship:TagMods",
    "@epam/loveship:TagProps",
    "@epam/loveship:TextInputProps",
@@ -3374,13 +3366,13 @@
  },
  "includedExports": {
   "totals": {
-   "allExports": 548,
+   "allExports": 549,
    "byModule": {
     "@epam/uui-core": 205,
     "@epam/uui-components": 92,
     "@epam/uui": 127,
     "@epam/promo": 51,
-    "@epam/loveship": 63,
+    "@epam/loveship": 64,
     "@epam/uui-editor": 10
    }
   },
@@ -3918,6 +3910,7 @@
      "SliderRatingProps",
      "SnackbarCardProps",
      "TabButtonMods",
+     "TabButtonProps",
      "TagMods",
      "TagProps",
      "TextInputMods",

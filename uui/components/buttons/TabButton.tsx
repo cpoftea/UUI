@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@epam/uui-components';
+import * as uui from '@epam/uui-components';
 import { withMods } from '@epam/uui-core';
 import { systemIcons } from '../../icons/icons';
 import { getIconClass } from './helper';
@@ -12,7 +12,7 @@ export interface TabButtonMods {
     withNotify?: boolean;
 }
 
-export type TabButtonProps = TabButtonMods & ButtonProps;
+export type TabButtonProps = TabButtonMods & uui.ButtonProps;
 
 function applyTabButtonMods(mods: TabButtonProps) {
     return [
@@ -24,7 +24,7 @@ function applyTabButtonMods(mods: TabButtonProps) {
     ];
 }
 
-export const TabButton = withMods<ButtonProps, TabButtonMods>(Button, applyTabButtonMods, (props) => ({
+export const TabButton = withMods<uui.ButtonProps, TabButtonMods>(uui.Button, applyTabButtonMods, (props) => ({
     dropdownIcon: systemIcons['36'].foldingArrow,
     clearIcon: systemIcons['36'].clear,
     countPosition: 'right',

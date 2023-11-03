@@ -82,8 +82,15 @@ export abstract class BaseDocsBlock extends React.Component<any, BaseDocsBlockSt
     private renderApiBlock = () => {
         let docsGenType = this.getDocsGenType();
         if (!docsGenType) {
-            // API block is always based on the "UUI" TS type.
-            docsGenType = this.config ? convertToGenericFormat(this.config).bySkin[TSkin.UUI]?.type : undefined;
+            if (this.config) {
+                const configGeneric = convertToGenericFormat(this.config).bySkin;
+                /**
+                 * API block is always based on the "UUI" TS type.
+                 * But if it's not defined for some reason, then the first available skin is used instead.
+                 */
+                const skinSpecific = configGeneric[TSkin.UUI] || configGeneric[Object.keys(configGeneric)[0] as TSkin];
+                docsGenType = skinSpecific?.type;
+            }
         }
         if (docsGenType) {
             return (

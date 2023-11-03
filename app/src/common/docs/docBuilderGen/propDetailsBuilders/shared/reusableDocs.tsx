@@ -4,10 +4,10 @@ import * as loveshipDocs from '../../../../../docs/_props/loveship/docs';
 import * as promoDocs from '../../../../../docs/_props/epam-promo/docs';
 
 const DOCS_SKIN_SPECIFIC = {
-    iconWithInfoDoc: {
+    iconDoc: {
         [TSkin.UUI]: uuiDocs.iconWithInfoDoc,
-        [TSkin.UUI3_loveship]: loveshipDocs.iconWithInfoDoc,
-        [TSkin.UUI4_promo]: promoDocs.iconWithInfoDoc,
+        [TSkin.UUI3_loveship]: loveshipDocs.iconDoc,
+        [TSkin.UUI4_promo]: promoDocs.iconDoc,
     },
     colorDoc: {
         [TSkin.UUI]: uuiDocs.colorDoc,

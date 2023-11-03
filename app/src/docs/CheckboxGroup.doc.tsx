@@ -10,6 +10,7 @@ import {
 import { TDocConfig } from '../common/docs/docBuilderGen/types';
 import * as loveshipDocs from './_props/loveship/docs';
 import * as promoDocs from './_props/epam-promo/docs';
+import { JsonView } from '../common/docs/docBuilderGen/propDetailsBuilders/shared/jsonView';
 
 export class CheckboxGroupDoc extends BaseDocsBlock {
     title = 'CheckboxGroup';
@@ -32,11 +33,7 @@ export class CheckboxGroupDoc extends BaseDocsBlock {
         doc: (doc: DocBuilder<uuiComponents.CheckboxGroupProps<any>>) => {
             const itemsExample = [{ name: 'Mentee', id: 1 }, { name: 'Direct Subordinates', id: 2 }, { name: 'Project Members', id: 3 }];
             doc.merge('value', {
-                renderEditor: ({ value }) => {
-                    if (value != null) {
-                        return (<uui.Text>{ JSON.stringify(value) }</uui.Text>);
-                    }
-                },
+                renderEditor: JsonView,
                 examples: [],
             });
             doc.merge('items', {

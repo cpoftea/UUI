@@ -9,6 +9,7 @@ import * as promo from '@epam/promo';
 import * as promoDocs from './_props/epam-promo/docs';
 import * as loveshipDocs from './_props/loveship/docs';
 import { TDocConfig } from '../common/docs/docBuilderGen/types';
+import { JsonView } from '../common/docs/docBuilderGen/propDetailsBuilders/shared/jsonView';
 
 export class MultiSwitchDoc extends BaseDocsBlock {
     title = 'MultiSwitch';
@@ -31,11 +32,7 @@ export class MultiSwitchDoc extends BaseDocsBlock {
         doc: (doc: DocBuilder<uui.MultiSwitchProps<any>>) => {
             doc.merge('size', { defaultValue: '36' });
             doc.merge('value', {
-                renderEditor: ({ value }) => {
-                    if (value != null) {
-                        return (<uui.Text>{ JSON.stringify(value) }</uui.Text>);
-                    }
-                },
+                renderEditor: JsonView,
                 examples: [],
             });
 

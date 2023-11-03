@@ -42,6 +42,7 @@ const COMMON_DOCS: Record<TTypeRef | TDocsGenExportedType, (skin?: TSkin) => Doc
     '@epam/uui-core:IHasCaption': () => new DocBuilder<IHasCaption>({ name: '' })
         .prop('caption', {
             examples: [
+                { value: undefined, name: '' },
                 { value: 'Short text', isDefault: true },
                 { name: 'Long text', value: 'kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa' },
                 { name: 'Long word', value: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },

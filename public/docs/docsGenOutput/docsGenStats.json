@@ -1,8 +1,8 @@
 {
  "missingPropComment": {
   "totals": {
-   "amountProps": 827,
-   "amountTypes": 260
+   "amountProps": 823,
+   "amountTypes": 257
   },
   "value": [
    {
@@ -1835,23 +1835,10 @@
     ]
    },
    {
-    "typeRef": "@epam/uui:TextInputMods",
-    "value": [
-     "size"
-    ]
-   },
-   {
     "typeRef": "@epam/uui:TextSettings",
     "value": [
      "fontSize",
      "lineHeight"
-    ]
-   },
-   {
-    "typeRef": "@epam/uui:TimePickerProps",
-    "value": [
-     "format",
-     "minutesStep"
     ]
    },
    {
@@ -2081,12 +2068,6 @@
     ]
    },
    {
-    "typeRef": "@epam/loveship:TextInputMods",
-    "value": [
-     "size"
-    ]
-   },
-   {
     "typeRef": "@epam/uui-editor:LinkElement",
     "value": [
      "href",
@@ -2136,7 +2117,7 @@
  },
  "missingTypeComment": {
   "totals": {
-   "amountTypes": 468
+   "amountTypes": 469
   },
   "value": [
    "@epam/uui-core:AcceptDropParams",
@@ -2586,13 +2567,14 @@
    "@epam/loveship:RowSize",
    "@epam/loveship:RowSizeMod",
    "@epam/loveship:ScrollBarsMods",
+   "@epam/loveship:SearchInputProps",
    "@epam/loveship:SizeMod",
    "@epam/loveship:SliderRatingProps",
    "@epam/loveship:SnackbarCardProps",
    "@epam/loveship:TabButtonMods",
    "@epam/loveship:TagMods",
    "@epam/loveship:TagProps",
-   "@epam/loveship:TextInputMods",
+   "@epam/loveship:TextInputProps",
    "@epam/loveship:TextMods",
    "@epam/loveship:TextProps",
    "@epam/loveship:TextSize",
@@ -3392,13 +3374,13 @@
  },
  "includedExports": {
   "totals": {
-   "allExports": 546,
+   "allExports": 548,
    "byModule": {
     "@epam/uui-core": 205,
     "@epam/uui-components": 92,
     "@epam/uui": 127,
     "@epam/promo": 51,
-    "@epam/loveship": 61,
+    "@epam/loveship": 63,
     "@epam/uui-editor": 10
    }
   },
@@ -3964,6 +3946,8 @@
      "MultiSwitchProps",
      "NotificationCardProps",
      "RowSize",
+     "SearchInputProps",
+     "TextInputProps",
      "TextProps",
      "TextSize",
      "TooltipProps"

@@ -25,7 +25,7 @@ const componentDetailsBuilder: TDetailsBuilder = (params) => {
 
     if (editor.type === TPropEditorType.component) {
         if (NAMES.indexOf(prop.name) !== -1) {
-            const { name, ...rest } = getDocBySkin(skin, 'iconWithInfoDoc').getProp('icon');
+            const { name, ...rest } = getDocBySkin(skin, 'iconDoc').getProp('icon');
             return rest;
         }
         return { examples: [SampleReactComponents.SimpleComponent] };
@@ -79,9 +79,10 @@ const stringDetailsBuilder: TDetailsBuilder = (params) => {
     if (editor.type === TPropEditorType.string) {
         return {
             examples: [
-                { name: 'empty', value: '' },
-                { name: 'short text', value: 'test' },
-                { name: 'long text', value: 'test 1 test 2 test 3 test 4' },
+                { name: '', value: undefined },
+                { name: 'short text', value: 'Hello World!', isDefault: true },
+                { name: 'long text', value: 'kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa' },
+                { name: 'Long word', value: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
             ],
             type: 'string',
         };

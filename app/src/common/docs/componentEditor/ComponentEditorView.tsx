@@ -246,7 +246,7 @@ function renderCode(params: Pick<IComponentEditorViewProps, 'demoComponentProps'
             }
         } else {
             if (name !== 'key') { // we ignore key because it's always passed
-                props.push(`${name}={}`);
+                props.push(`${name}={${val === undefined ? 'undefined' : ''}}`);
             }
         }
     });

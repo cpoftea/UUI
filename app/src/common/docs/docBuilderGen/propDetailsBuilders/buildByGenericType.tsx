@@ -80,7 +80,7 @@ const stringDetailsBuilder: TDetailsBuilder = (params) => {
         return {
             examples: [
                 { name: '', value: undefined },
-                { name: 'short text', value: 'Hello World!', isDefault: true },
+                { name: 'short text', value: 'Hello, World!', isDefault: true },
                 { name: 'long text', value: 'kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa kolbasa' },
                 { name: 'Long word', value: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
             ],

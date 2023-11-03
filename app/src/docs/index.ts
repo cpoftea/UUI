@@ -34,7 +34,7 @@ export * from './Spinner.doc';
 export * from './Slider.doc';
 export * from './SliderRating.doc';
 export * from './Tag.doc';
-export * from './RichTextView.doc';
+export * from './richTextView/RichTextView.doc';
 export * from './Text.doc';
 export * from './TextPlaceholder.doc';
 export * from './datePicker/DatePicker.doc';

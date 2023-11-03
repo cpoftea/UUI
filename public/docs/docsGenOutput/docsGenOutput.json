@@ -77221,6 +77221,9 @@
      "raw": "RichTextViewMods",
      "print": [
       "interface RichTextViewMods {",
+      "    /**",
+      "     * @default '14'",
+      "     */",
       "    size?: '12' | '14' | '16';",
       "}"
      ]
@@ -77229,6 +77232,14 @@
      {
       "uid": 1,
       "name": "size",
+      "comment": {
+       "raw": [
+        "@default '14'"
+       ],
+       "tags": {
+        "@default": "14"
+       }
+      },
       "typeValue": {
        "raw": "'12' | '14' | '16'"
       },
@@ -77316,6 +77327,14 @@
      {
       "uid": 5,
       "name": "size",
+      "comment": {
+       "raw": [
+        "@default '14'"
+       ],
+       "tags": {
+        "@default": "14"
+       }
+      },
       "typeValue": {
        "raw": "'12' | '14' | '16'"
       },
@@ -88046,6 +88065,9 @@
      "raw": "RichTextViewMods",
      "print": [
       "interface RichTextViewMods {",
+      "    /**",
+      "     * @default '14'",
+      "     */",
       "    size?: '12' | '14' | '16';",
       "}"
      ]
@@ -88054,6 +88076,14 @@
      {
       "uid": 1,
       "name": "size",
+      "comment": {
+       "raw": [
+        "@default '14'"
+       ],
+       "tags": {
+        "@default": "14"
+       }
+      },
       "typeValue": {
        "raw": "'12' | '14' | '16'"
       },
@@ -88065,6 +88095,103 @@
         "16"
        ]
       },
+      "required": false
+     }
+    ],
+    "propsFromUnion": false
+   }
+  },
+  "@epam/promo:RichTextViewProps": {
+   "summary": {
+    "module": "@epam/promo",
+    "typeName": {
+     "name": "RichTextViewProps",
+     "nameFull": "RichTextViewProps"
+    },
+    "src": "epam-promo/components/typography/RichTextView.tsx",
+    "exported": true
+   },
+   "details": {
+    "kind": 263,
+    "typeValue": {
+     "raw": "RichTextViewProps",
+     "print": [
+      "interface RichTextViewProps extends uuiComponents.RichTextViewProps, RichTextViewMods {",
+      "}"
+     ]
+    },
+    "props": [
+     {
+      "uid": 1,
+      "name": "htmlContent",
+      "typeValue": {
+       "raw": "any"
+      },
+      "from": "@epam/uui-components:RichTextViewProps",
+      "required": false
+     },
+     {
+      "uid": 2,
+      "name": "cx",
+      "comment": {
+       "raw": [
+        "CSS class(es) to put on component's root. See {@link https://github.com/JedWatson/classnames#usage} for details"
+       ]
+      },
+      "typeValue": {
+       "raw": "null | string | number | boolean | ClassDictionary | ClassArray"
+      },
+      "typeValueRef": "@epam/uui-core:ClassValue",
+      "from": "@epam/uui-core:IHasCX",
+      "required": false
+     },
+     {
+      "uid": 3,
+      "name": "children",
+      "typeValue": {
+       "raw": "null | string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal"
+      },
+      "typeValueRef": "@types/react:ReactNode",
+      "from": "@epam/uui-core:IHasChildren",
+      "required": false
+     },
+     {
+      "uid": 4,
+      "name": "rawProps",
+      "comment": {
+       "raw": [
+        "Any HTML attributes (native or 'data-') to put on the underlying component"
+       ]
+      },
+      "typeValue": {
+       "raw": "React.HTMLAttributes<HTMLDivElement> & Record<`data-${string}`, string>"
+      },
+      "from": "@epam/uui-core:IHasRawProps",
+      "required": false
+     },
+     {
+      "uid": 5,
+      "name": "size",
+      "comment": {
+       "raw": [
+        "@default '14'"
+       ],
+       "tags": {
+        "@default": "14"
+       }
+      },
+      "typeValue": {
+       "raw": "'12' | '14' | '16'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "12",
+        "14",
+        "16"
+       ]
+      },
+      "from": "@epam/promo:RichTextViewMods",
       "required": false
      }
     ],
@@ -94983,6 +95110,9 @@
      "raw": "RichTextViewMods",
      "print": [
       "interface RichTextViewMods {",
+      "    /**",
+      "     * @default '14'",
+      "     */",
       "    size?: '12' | '14' | '16';",
       "}"
      ]
@@ -94991,6 +95121,14 @@
      {
       "uid": 1,
       "name": "size",
+      "comment": {
+       "raw": [
+        "@default '14'"
+       ],
+       "tags": {
+        "@default": "14"
+       }
+      },
       "typeValue": {
        "raw": "'12' | '14' | '16'"
       },
@@ -95002,6 +95140,103 @@
         "16"
        ]
       },
+      "required": false
+     }
+    ],
+    "propsFromUnion": false
+   }
+  },
+  "@epam/loveship:RichTextViewProps": {
+   "summary": {
+    "module": "@epam/loveship",
+    "typeName": {
+     "name": "RichTextViewProps",
+     "nameFull": "RichTextViewProps"
+    },
+    "src": "loveship/components/typography/RichTextView.tsx",
+    "exported": true
+   },
+   "details": {
+    "kind": 263,
+    "typeValue": {
+     "raw": "RichTextViewProps",
+     "print": [
+      "interface RichTextViewProps extends uuiComponents.RichTextViewProps, RichTextViewMods {",
+      "}"
+     ]
+    },
+    "props": [
+     {
+      "uid": 1,
+      "name": "htmlContent",
+      "typeValue": {
+       "raw": "any"
+      },
+      "from": "@epam/uui-components:RichTextViewProps",
+      "required": false
+     },
+     {
+      "uid": 2,
+      "name": "cx",
+      "comment": {
+       "raw": [
+        "CSS class(es) to put on component's root. See {@link https://github.com/JedWatson/classnames#usage} for details"
+       ]
+      },
+      "typeValue": {
+       "raw": "null | string | number | boolean | ClassDictionary | ClassArray"
+      },
+      "typeValueRef": "@epam/uui-core:ClassValue",
+      "from": "@epam/uui-core:IHasCX",
+      "required": false
+     },
+     {
+      "uid": 3,
+      "name": "children",
+      "typeValue": {
+       "raw": "null | string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal"
+      },
+      "typeValueRef": "@types/react:ReactNode",
+      "from": "@epam/uui-core:IHasChildren",
+      "required": false
+     },
+     {
+      "uid": 4,
+      "name": "rawProps",
+      "comment": {
+       "raw": [
+        "Any HTML attributes (native or 'data-') to put on the underlying component"
+       ]
+      },
+      "typeValue": {
+       "raw": "React.HTMLAttributes<HTMLDivElement> & Record<`data-${string}`, string>"
+      },
+      "from": "@epam/uui-core:IHasRawProps",
+      "required": false
+     },
+     {
+      "uid": 5,
+      "name": "size",
+      "comment": {
+       "raw": [
+        "@default '14'"
+       ],
+       "tags": {
+        "@default": "14"
+       }
+      },
+      "typeValue": {
+       "raw": "'12' | '14' | '16'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "12",
+        "14",
+        "16"
+       ]
+      },
+      "from": "@epam/loveship:RichTextViewMods",
       "required": false
      }
     ],

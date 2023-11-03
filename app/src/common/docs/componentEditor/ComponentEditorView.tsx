@@ -244,6 +244,10 @@ function renderCode(params: Pick<IComponentEditorViewProps, 'demoComponentProps'
             } else {
                 props.push(`${name}={${JSON.stringify(val)}}`);
             }
+        } else {
+            if (name !== 'key') { // we ignore key because it's always passed
+                props.push(`${name}={}`);
+            }
         }
     });
 

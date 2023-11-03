@@ -1,8 +1,8 @@
 {
  "missingPropComment": {
   "totals": {
-   "amountProps": 819,
-   "amountTypes": 256
+   "amountProps": 816,
+   "amountTypes": 253
   },
   "value": [
    {
@@ -1792,12 +1792,6 @@
     ]
    },
    {
-    "typeRef": "@epam/uui:RichTextViewMods",
-    "value": [
-     "size"
-    ]
-   },
-   {
     "typeRef": "@epam/uui:RowMods",
     "value": [
      "borderBottom",
@@ -1892,12 +1886,6 @@
    },
    {
     "typeRef": "@epam/promo:RatingMods",
-    "value": [
-     "size"
-    ]
-   },
-   {
-    "typeRef": "@epam/promo:RichTextViewMods",
     "value": [
      "size"
     ]
@@ -2008,12 +1996,6 @@
     ]
    },
    {
-    "typeRef": "@epam/loveship:RichTextViewMods",
-    "value": [
-     "size"
-    ]
-   },
-   {
     "typeRef": "@epam/loveship:RowMods",
     "value": [
      "spacing"
@@ -2108,7 +2090,7 @@
  },
  "missingTypeComment": {
   "totals": {
-   "amountTypes": 471
+   "amountTypes": 473
   },
   "value": [
    "@epam/uui-core:AcceptDropParams",
@@ -2500,6 +2482,7 @@
    "@epam/promo:PanelMods",
    "@epam/promo:RatingMods",
    "@epam/promo:RichTextViewMods",
+   "@epam/promo:RichTextViewProps",
    "@epam/promo:RowSize",
    "@epam/promo:RowSizeMod",
    "@epam/promo:ScrollBarsMods",
@@ -2555,6 +2538,7 @@
    "@epam/loveship:RatingMods",
    "@epam/loveship:RatingProps",
    "@epam/loveship:RichTextViewMods",
+   "@epam/loveship:RichTextViewProps",
    "@epam/loveship:RowSize",
    "@epam/loveship:RowSizeMod",
    "@epam/loveship:ScrollBarsMods",
@@ -3367,13 +3351,13 @@
  },
  "includedExports": {
   "totals": {
-   "allExports": 550,
+   "allExports": 552,
    "byModule": {
     "@epam/uui-core": 205,
     "@epam/uui-components": 92,
     "@epam/uui": 127,
-    "@epam/promo": 51,
-    "@epam/loveship": 65,
+    "@epam/promo": 52,
+    "@epam/loveship": 66,
     "@epam/uui-editor": 10
    }
   },
@@ -3839,6 +3823,7 @@
      "PanelMods",
      "RatingMods",
      "RichTextViewMods",
+     "RichTextViewProps",
      "RowMods",
      "RowSizeMod",
      "ScrollBarsMods",
@@ -3904,6 +3889,7 @@
      "RatingMods",
      "RatingProps",
      "RichTextViewMods",
+     "RichTextViewProps",
      "RowMods",
      "RowSizeMod",
      "ScrollBarsMods",

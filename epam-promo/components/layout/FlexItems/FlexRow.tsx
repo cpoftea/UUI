@@ -1,11 +1,15 @@
 import * as types from '../../types';
-import { FlexRowProps, withMods } from '@epam/uui-core';
-import { FlexRow as uuiFlexRow, RowMods as uuiRowMods } from '@epam/uui';
+import { withMods } from '@epam/uui-core';
+import * as uui from '@epam/uui';
 
-export interface RowMods extends uuiRowMods, types.RowSizeMod {
+export interface RowMods extends uui.RowMods, types.RowSizeMod {
+    /**
+     * @default 'none'
+     */
     background?: 'white' | 'gray5' | 'none';
 }
+export type FlexRowProps = uui.FlexRowProps & RowMods;
 
-export const FlexRow = withMods<FlexRowProps, RowMods>(uuiFlexRow, (props) => {
+export const FlexRow = withMods<uui.FlexRowProps, RowMods>(uui.FlexRow, (props) => {
     return [`flex-row-background-${props.background || 'none'}`];
 });

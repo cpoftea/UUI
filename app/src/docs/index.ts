@@ -47,7 +47,7 @@ export * from './LabeledInput.doc';
 export * from './Alert.doc';
 export * from './IconContainer.doc';
 export * from './Blocker.doc';
-export * from './FlexRow.doc';
+export * from './flexRow/FlexRow.doc';
 export * from './FlexCell.doc';
 export * from './FlexSpacer.doc';
 export * from './Panel.doc';

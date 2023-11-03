@@ -1,19 +1,26 @@
 import * as types from '../../types';
-import { FlexRowProps, withMods } from '@epam/uui-core';
-import { FlexRow as uuiFlexRow, RowMods as uuiRowMods } from '@epam/uui';
+import * as uuiCore from '@epam/uui-core';
+import * as uui from '@epam/uui';
 
-export interface RowMods extends Omit<uuiRowMods, 'spacing'>, types.RowSizeMod {
+export interface RowMods extends Omit<uui.RowMods, 'spacing'>, types.RowSizeMod {
+    /**
+     * @default 'none'
+     */
     background?: 'white' | 'night50' | 'night100' | 'none';
     spacing?: '6' | '12' | '18' | null;
+    /**
+     * @default 'panel'
+     */
     type?: 'form' | 'panel';
 }
+export type FlexRowProps = uuiCore.FlexRowProps & RowMods;
 
-const commonDefaults: RowMods & FlexRowProps = {
+const commonDefaults: RowMods & uuiCore.FlexRowProps = {
     size: '36',
     background: 'none',
 };
 
-const rowTypesDefaults: Record<string, RowMods & FlexRowProps> = {
+const rowTypesDefaults: Record<string, RowMods & uuiCore.FlexRowProps> = {
     form: {
         ...commonDefaults,
         spacing: '12',
@@ -29,16 +36,16 @@ const rowTypesDefaults: Record<string, RowMods & FlexRowProps> = {
     },
 };
 
-export const FlexRow = withMods<FlexRowProps, RowMods>(
-    uuiFlexRow,
+export const FlexRow = uuiCore.withMods<uuiCore.FlexRowProps, RowMods>(
+    uui.FlexRow,
     (props) => {
         return [`flex-row-background-${props.background || 'none'}`];
     },
     (props) => {
         const defaults = rowTypesDefaults[props.type || 'panel'];
-        props = { ...defaults, ...props };
 
         return {
+            ...defaults,
             ...props,
         } as FlexRowProps;
     },

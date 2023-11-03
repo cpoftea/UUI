@@ -81,7 +81,7 @@ interface ComponentEditorState {
     isInited: boolean;
     selectedContext?: string;
     selectedExamplesIds: { [name: string]: string };
-    inputValues: { [name: string]: string };
+    inputValues: { [name: string]: any };
     componentKey?: string;
 }
 
@@ -130,7 +130,10 @@ export class ComponentEditor extends React.Component<ComponentEditorProps, Compo
                         selectedExamplesIds[prop.name] = defaultExample.id;
                     }
 
-                    inputValues[prop.name] = defaultExample?.value;
+                    const value = defaultExample?.value;
+                    if (typeof value !== 'undefined') {
+                        inputValues[prop.name] = value;
+                    }
                 });
                 this.initialProps = selectedExamplesIds;
                 this.setState({ selectedExamplesIds, inputValues, isInited: true });

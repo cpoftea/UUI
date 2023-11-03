@@ -1,5 +1,5 @@
 {
- "timestamp": "2023-11-02",
+ "timestamp": "2023-11-03",
  "docsGenTypes": {
   "@epam/uui-core:AcceptDropParams": {
    "summary": {
@@ -85673,6 +85673,272 @@
     }
    }
   },
+  "@epam/promo:FlexRowProps": {
+   "summary": {
+    "module": "@epam/promo",
+    "typeName": {
+     "name": "FlexRowProps",
+     "nameFull": "FlexRowProps"
+    },
+    "src": "epam-promo/components/layout/FlexItems/FlexRow.tsx",
+    "exported": true
+   },
+   "details": {
+    "kind": 264,
+    "typeValue": {
+     "raw": "FlexRowProps",
+     "print": [
+      "type FlexRowProps = uui.FlexRowProps & RowMods;"
+     ]
+    },
+    "props": [
+     {
+      "uid": 1,
+      "name": "children",
+      "typeValue": {
+       "raw": "null | string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal"
+      },
+      "from": "@epam/uui-core:IHasChildren",
+      "required": false
+     },
+     {
+      "uid": 2,
+      "name": "cx",
+      "comment": {
+       "raw": [
+        "CSS class(es) to put on component's root. See {@link https://github.com/JedWatson/classnames#usage} for details"
+       ]
+      },
+      "typeValue": {
+       "raw": "null | string | number | boolean | ClassDictionary | ClassArray"
+      },
+      "from": "@epam/uui-core:IHasCX",
+      "required": false
+     },
+     {
+      "uid": 3,
+      "name": "rawProps",
+      "comment": {
+       "raw": [
+        "Any HTML attributes (native or 'data-') to put on the underlying component"
+       ]
+      },
+      "typeValue": {
+       "raw": "React.HTMLAttributes<HTMLDivElement> & Record<`data-${string}`, string>"
+      },
+      "from": "@epam/uui-core:IHasRawProps",
+      "required": false
+     },
+     {
+      "uid": 4,
+      "name": "onClick",
+      "comment": {
+       "raw": [
+        "Called when component is clicked"
+       ]
+      },
+      "typeValue": {
+       "raw": "(e?: any) => void"
+      },
+      "editor": {
+       "type": "func"
+      },
+      "from": "@epam/uui-core:IClickable",
+      "required": false
+     },
+     {
+      "uid": 5,
+      "name": "key",
+      "typeValue": {
+       "raw": "null | string | number"
+      },
+      "from": "@types/react:Attributes",
+      "required": false
+     },
+     {
+      "uid": 6,
+      "name": "alignItems",
+      "comment": {
+       "raw": [
+        "Flexbox align-items property [Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)"
+       ]
+      },
+      "typeValue": {
+       "raw": "'top' | 'bottom' | 'center' | 'stretch'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "bottom",
+        "center",
+        "stretch",
+        "top"
+       ]
+      },
+      "from": "@epam/uui-core:FlexRowProps",
+      "required": false
+     },
+     {
+      "uid": 7,
+      "name": "background",
+      "comment": {
+       "raw": [
+        "@default 'none'"
+       ],
+       "tags": {
+        "@default": "none"
+       }
+      },
+      "typeValue": {
+       "raw": "'white' | 'none' | 'gray5'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "gray5",
+        "none",
+        "white"
+       ]
+      },
+      "from": "@epam/promo:RowMods",
+      "required": false
+     },
+     {
+      "uid": 8,
+      "name": "borderBottom",
+      "typeValue": {
+       "raw": "boolean"
+      },
+      "editor": {
+       "type": "bool"
+      },
+      "from": "@epam/uui:RowMods",
+      "required": false
+     },
+     {
+      "uid": 9,
+      "name": "columnGap",
+      "typeValue": {
+       "raw": "number | '36' | '18' | '24' | '6' | '12'"
+      },
+      "from": "@epam/uui:RowMods",
+      "required": false
+     },
+     {
+      "uid": 10,
+      "name": "margin",
+      "typeValue": {
+       "raw": "'24' | '12'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "12",
+        "24"
+       ]
+      },
+      "from": "@epam/uui:RowMods",
+      "required": false
+     },
+     {
+      "uid": 11,
+      "name": "padding",
+      "typeValue": {
+       "raw": "'18' | '24' | '6' | '12'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "12",
+        "18",
+        "24",
+        "6"
+       ]
+      },
+      "from": "@epam/uui:RowMods",
+      "required": false
+     },
+     {
+      "uid": 12,
+      "name": "rowGap",
+      "typeValue": {
+       "raw": "number | '36' | '18' | '24' | '6' | '12'"
+      },
+      "from": "@epam/uui:RowMods",
+      "required": false
+     },
+     {
+      "uid": 13,
+      "name": "spacing",
+      "typeValue": {
+       "raw": "'18' | '6' | '12'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "12",
+        "18",
+        "6"
+       ]
+      },
+      "from": "@epam/uui:RowMods",
+      "required": false
+     },
+     {
+      "uid": 14,
+      "name": "topShadow",
+      "typeValue": {
+       "raw": "boolean"
+      },
+      "editor": {
+       "type": "bool"
+      },
+      "from": "@epam/uui:RowMods",
+      "required": false
+     },
+     {
+      "uid": 15,
+      "name": "vPadding",
+      "typeValue": {
+       "raw": "'36' | '48' | '18' | '24' | '12'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "12",
+        "18",
+        "24",
+        "36",
+        "48"
+       ]
+      },
+      "from": "@epam/uui:RowMods",
+      "required": false
+     },
+     {
+      "uid": 16,
+      "name": "size",
+      "typeValue": {
+       "raw": "null | '36' | '48' | '24' | '30' | '42'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "24",
+        "30",
+        "36",
+        "42",
+        "48",
+        null
+       ]
+      },
+      "from": "@epam/uui:RowSizeMod",
+      "required": false
+     }
+    ],
+    "propsFromUnion": false
+   }
+  },
   "@epam/promo:FontMod": {
    "summary": {
     "module": "@epam/promo",
@@ -87191,6 +87457,18 @@
      },
      {
       "uid": 7,
+      "name": "key",
+      "typeValue": {
+       "raw": "string"
+      },
+      "editor": {
+       "type": "string"
+      },
+      "from": "@epam/uui-core:INotification",
+      "required": true
+     },
+     {
+      "uid": 8,
       "name": "onSuccess",
       "typeValue": {
        "raw": "() => void"
@@ -87202,7 +87480,7 @@
       "required": false
      },
      {
-      "uid": 8,
+      "uid": 9,
       "name": "clearTimer",
       "typeValue": {
        "raw": "() => void"
@@ -87214,7 +87492,7 @@
       "required": false
      },
      {
-      "uid": 9,
+      "uid": 10,
       "name": "refreshTimer",
       "typeValue": {
        "raw": "() => void"
@@ -87226,25 +87504,13 @@
       "required": false
      },
      {
-      "uid": 10,
+      "uid": 11,
       "name": "id",
       "typeValue": {
        "raw": "number"
       },
       "editor": {
        "type": "number"
-      },
-      "from": "@epam/uui-core:INotification",
-      "required": true
-     },
-     {
-      "uid": 11,
-      "name": "key",
-      "typeValue": {
-       "raw": "string"
-      },
-      "editor": {
-       "type": "string"
       },
       "from": "@epam/uui-core:INotification",
       "required": true
@@ -87436,7 +87702,10 @@
     "typeValue": {
      "raw": "RowMods",
      "print": [
-      "interface RowMods extends uuiRowMods, types.RowSizeMod {",
+      "interface RowMods extends uui.RowMods, types.RowSizeMod {",
+      "    /**",
+      "     * @default 'none'",
+      "     */",
       "    background?: 'white' | 'gray5' | 'none';",
       "}"
      ]
@@ -87445,6 +87714,14 @@
      {
       "uid": 1,
       "name": "background",
+      "comment": {
+       "raw": [
+        "@default 'none'"
+       ],
+       "tags": {
+        "@default": "none"
+       }
+      },
       "typeValue": {
        "raw": "'white' | 'none' | 'gray5'"
       },
@@ -91175,6 +91452,310 @@
     }
    }
   },
+  "@epam/loveship:FlexRowProps": {
+   "summary": {
+    "module": "@epam/loveship",
+    "typeName": {
+     "name": "FlexRowProps",
+     "nameFull": "FlexRowProps"
+    },
+    "src": "loveship/components/layout/FlexItems/FlexRow.tsx",
+    "exported": true
+   },
+   "details": {
+    "kind": 264,
+    "typeValue": {
+     "raw": "FlexRowProps",
+     "print": [
+      "type FlexRowProps = uuiCore.FlexRowProps & RowMods;"
+     ]
+    },
+    "props": [
+     {
+      "uid": 1,
+      "name": "cx",
+      "comment": {
+       "raw": [
+        "CSS class(es) to put on component's root. See {@link https://github.com/JedWatson/classnames#usage} for details"
+       ]
+      },
+      "typeValue": {
+       "raw": "null | string | number | boolean | ClassDictionary | ClassArray"
+      },
+      "typeValueRef": "@epam/uui-core:ClassValue",
+      "from": "@epam/uui-core:IHasCX",
+      "required": false
+     },
+     {
+      "uid": 2,
+      "name": "onClick",
+      "comment": {
+       "raw": [
+        "Called when component is clicked"
+       ]
+      },
+      "typeValue": {
+       "raw": "(e?: any) => void"
+      },
+      "editor": {
+       "type": "func"
+      },
+      "from": "@epam/uui-core:IClickable",
+      "required": false
+     },
+     {
+      "uid": 3,
+      "name": "key",
+      "typeValue": {
+       "raw": "null | string | number"
+      },
+      "from": "@types/react:Attributes",
+      "required": false
+     },
+     {
+      "uid": 4,
+      "name": "children",
+      "typeValue": {
+       "raw": "null | string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal"
+      },
+      "typeValueRef": "@types/react:ReactNode",
+      "from": "@epam/uui-core:IHasChildren",
+      "required": false
+     },
+     {
+      "uid": 5,
+      "name": "rawProps",
+      "comment": {
+       "raw": [
+        "Any HTML attributes (native or 'data-') to put on the underlying component"
+       ]
+      },
+      "typeValue": {
+       "raw": "React.HTMLAttributes<HTMLDivElement> & Record<`data-${string}`, string>"
+      },
+      "from": "@epam/uui-core:IHasRawProps",
+      "required": false
+     },
+     {
+      "uid": 6,
+      "name": "alignItems",
+      "comment": {
+       "raw": [
+        "Flexbox align-items property [Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)"
+       ]
+      },
+      "typeValue": {
+       "raw": "'top' | 'bottom' | 'center' | 'stretch'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "bottom",
+        "center",
+        "stretch",
+        "top"
+       ]
+      },
+      "from": "@epam/uui-core:FlexRowProps",
+      "required": false
+     },
+     {
+      "uid": 7,
+      "name": "columnGap",
+      "comment": {
+       "raw": [
+        "Flexbox column gap property [Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-gap-row-gap-column-gap)"
+       ]
+      },
+      "typeValue": {
+       "raw": "number | '36' | '18' | '24' | '12' | '6'"
+      },
+      "from": "@epam/uui-core:FlexRowProps",
+      "required": false
+     },
+     {
+      "uid": 8,
+      "name": "rowGap",
+      "comment": {
+       "raw": [
+        "Flexbox row gap property [Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-gap-row-gap-column-gap)"
+       ]
+      },
+      "typeValue": {
+       "raw": "number | '36' | '18' | '24' | '12' | '6'"
+      },
+      "from": "@epam/uui-core:FlexRowProps",
+      "required": false
+     },
+     {
+      "uid": 9,
+      "name": "background",
+      "comment": {
+       "raw": [
+        "@default 'none'"
+       ],
+       "tags": {
+        "@default": "none"
+       }
+      },
+      "typeValue": {
+       "raw": "'white' | 'none' | 'night50' | 'night100'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "night100",
+        "night50",
+        "none",
+        "white"
+       ]
+      },
+      "from": "@epam/loveship:RowMods",
+      "required": false
+     },
+     {
+      "uid": 10,
+      "name": "spacing",
+      "typeValue": {
+       "raw": "null | '18' | '12' | '6'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "12",
+        "18",
+        "6",
+        null
+       ]
+      },
+      "from": "@epam/loveship:RowMods",
+      "required": false
+     },
+     {
+      "uid": 11,
+      "name": "type",
+      "comment": {
+       "raw": [
+        "@default 'panel'"
+       ],
+       "tags": {
+        "@default": "panel"
+       }
+      },
+      "typeValue": {
+       "raw": "'form' | 'panel'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "form",
+        "panel"
+       ]
+      },
+      "from": "@epam/loveship:RowMods",
+      "required": false
+     },
+     {
+      "uid": 12,
+      "name": "size",
+      "typeValue": {
+       "raw": "null | '36' | '48' | '24' | '30' | '42'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "24",
+        "30",
+        "36",
+        "42",
+        "48",
+        null
+       ]
+      },
+      "from": "@epam/uui:RowSizeMod",
+      "required": false
+     },
+     {
+      "uid": 13,
+      "name": "borderBottom",
+      "typeValue": {
+       "raw": "boolean"
+      },
+      "editor": {
+       "type": "bool"
+      },
+      "from": "@epam/uui:RowMods",
+      "required": false
+     },
+     {
+      "uid": 14,
+      "name": "margin",
+      "typeValue": {
+       "raw": "'24' | '12'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "12",
+        "24"
+       ]
+      },
+      "from": "@epam/uui:RowMods",
+      "required": false
+     },
+     {
+      "uid": 15,
+      "name": "padding",
+      "typeValue": {
+       "raw": "'18' | '24' | '12' | '6'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "12",
+        "18",
+        "24",
+        "6"
+       ]
+      },
+      "from": "@epam/uui:RowMods",
+      "required": false
+     },
+     {
+      "uid": 16,
+      "name": "topShadow",
+      "typeValue": {
+       "raw": "boolean"
+      },
+      "editor": {
+       "type": "bool"
+      },
+      "from": "@epam/uui:RowMods",
+      "required": false
+     },
+     {
+      "uid": 17,
+      "name": "vPadding",
+      "typeValue": {
+       "raw": "'36' | '48' | '18' | '24' | '12'"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        "12",
+        "18",
+        "24",
+        "36",
+        "48"
+       ]
+      },
+      "from": "@epam/uui:RowMods",
+      "required": false
+     }
+    ],
+    "propsFromUnion": false
+   }
+  },
   "@epam/loveship:FontMod": {
    "summary": {
     "module": "@epam/loveship",
@@ -93789,9 +94370,15 @@
     "typeValue": {
      "raw": "RowMods",
      "print": [
-      "interface RowMods extends Omit<uuiRowMods, 'spacing'>, types.RowSizeMod {",
+      "interface RowMods extends Omit<uui.RowMods, 'spacing'>, types.RowSizeMod {",
+      "    /**",
+      "     * @default 'none'",
+      "     */",
       "    background?: 'white' | 'night50' | 'night100' | 'none';",
       "    spacing?: '6' | '12' | '18' | null;",
+      "    /**",
+      "     * @default 'panel'",
+      "     */",
       "    type?: 'form' | 'panel';",
       "}"
      ]
@@ -93800,6 +94387,14 @@
      {
       "uid": 1,
       "name": "background",
+      "comment": {
+       "raw": [
+        "@default 'none'"
+       ],
+       "tags": {
+        "@default": "none"
+       }
+      },
       "typeValue": {
        "raw": "'white' | 'none' | 'night50' | 'night100'"
       },
@@ -93834,6 +94429,14 @@
      {
       "uid": 3,
       "name": "type",
+      "comment": {
+       "raw": [
+        "@default 'panel'"
+       ],
+       "tags": {
+        "@default": "panel"
+       }
+      },
       "typeValue": {
        "raw": "'form' | 'panel'"
       },

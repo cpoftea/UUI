@@ -1,8 +1,8 @@
 {
  "missingPropComment": {
   "totals": {
-   "amountProps": 834,
-   "amountTypes": 264
+   "amountProps": 831,
+   "amountTypes": 263
   },
   "value": [
    {
@@ -1935,12 +1935,6 @@
     ]
    },
    {
-    "typeRef": "@epam/promo:RowMods",
-    "value": [
-     "background"
-    ]
-   },
-   {
     "typeRef": "@epam/promo:RowSizeMod",
     "value": [
      "size"
@@ -2060,9 +2054,7 @@
    {
     "typeRef": "@epam/loveship:RowMods",
     "value": [
-     "background",
-     "spacing",
-     "type"
+     "spacing"
     ]
    },
    {
@@ -2535,6 +2527,7 @@
    "@epam/promo:EpamPrimaryColor",
    "@epam/promo:ErrorHandlerProps",
    "@epam/promo:FillStyle",
+   "@epam/promo:FlexRowProps",
    "@epam/promo:FontMod",
    "@epam/promo:FontStyle",
    "@epam/promo:IconButtonMods",
@@ -2553,7 +2546,6 @@
    "@epam/promo:PanelMods",
    "@epam/promo:RatingMods",
    "@epam/promo:RichTextViewMods",
-   "@epam/promo:RowMods",
    "@epam/promo:RowSize",
    "@epam/promo:RowSizeMod",
    "@epam/promo:ScrollBarsMods",
@@ -2585,6 +2577,7 @@
    "@epam/loveship:ErrorConfig",
    "@epam/loveship:ErrorPageProps",
    "@epam/loveship:FillStyle",
+   "@epam/loveship:FlexRowProps",
    "@epam/loveship:FontMod",
    "@epam/loveship:FontStyle",
    "@epam/loveship:IconButtonMods",
@@ -2607,7 +2600,6 @@
    "@epam/loveship:RatingMods",
    "@epam/loveship:RatingProps",
    "@epam/loveship:RichTextViewMods",
-   "@epam/loveship:RowMods",
    "@epam/loveship:RowSize",
    "@epam/loveship:RowSizeMod",
    "@epam/loveship:ScrollBarsMods",
@@ -3417,13 +3409,13 @@
  },
  "includedExports": {
   "totals": {
-   "allExports": 542,
+   "allExports": 544,
    "byModule": {
     "@epam/uui-core": 205,
     "@epam/uui-components": 92,
     "@epam/uui": 127,
-    "@epam/promo": 49,
-    "@epam/loveship": 59,
+    "@epam/promo": 50,
+    "@epam/loveship": 60,
     "@epam/uui-editor": 10
    }
   },
@@ -3911,6 +3903,7 @@
      "EpamGrayscaleColor",
      "EpamPrimaryColor",
      "FillStyle",
+     "FlexRowProps",
      "FontStyle",
      "IconButtonProps",
      "IconColor",
@@ -3978,6 +3971,7 @@
      "EpamGrayscaleColor",
      "EpamPrimaryColor",
      "FillStyle",
+     "FlexRowProps",
      "FontStyle",
      "IconButtonProps",
      "LinkButtonProps",

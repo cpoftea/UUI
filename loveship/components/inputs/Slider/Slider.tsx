@@ -6,4 +6,6 @@ export function applySliderMods() {
     return [css.root];
 }
 
-export const Slider = withMods<SliderBaseProps<number>>(UuiSlider, applySliderMods);
+export interface SliderProps extends SliderBaseProps<number> {}
+
+export const Slider = withMods<SliderProps>(UuiSlider, applySliderMods);

@@ -2108,7 +2108,7 @@
  },
  "missingTypeComment": {
   "totals": {
-   "amountTypes": 470
+   "amountTypes": 471
   },
   "value": [
    "@epam/uui-core:AcceptDropParams",
@@ -2560,6 +2560,7 @@
    "@epam/loveship:ScrollBarsMods",
    "@epam/loveship:SearchInputProps",
    "@epam/loveship:SizeMod",
+   "@epam/loveship:SliderProps",
    "@epam/loveship:SliderRatingProps",
    "@epam/loveship:SnackbarCardProps",
    "@epam/loveship:TabButtonMods",
@@ -3366,13 +3367,13 @@
  },
  "includedExports": {
   "totals": {
-   "allExports": 549,
+   "allExports": 550,
    "byModule": {
     "@epam/uui-core": 205,
     "@epam/uui-components": 92,
     "@epam/uui": 127,
     "@epam/promo": 51,
-    "@epam/loveship": 64,
+    "@epam/loveship": 65,
     "@epam/uui-editor": 10
    }
   },
@@ -3907,6 +3908,7 @@
      "RowSizeMod",
      "ScrollBarsMods",
      "SizeMod",
+     "SliderProps",
      "SliderRatingProps",
      "SnackbarCardProps",
      "TabButtonMods",

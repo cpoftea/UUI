@@ -5,6 +5,18 @@ import { TPropEditorType } from '../../../apiReference/sharedTypes';
 import { getDocBySkin } from './shared/reusableDocs';
 import { NumEditor } from './shared/numEditor';
 
+const COLOR_PROP_NAMES = ['color'];
+const ICON_PROP_NAMES = [
+    'icon',
+    'indeterminateIcon',
+    'clearIcon',
+    'dropdownIcon',
+    'acceptIcon',
+    'cancelIcon',
+    'filledStarIcon',
+    'emptyStarIcon',
+];
+
 const boolDetailsBuilder: TDetailsBuilder = (params) => {
     const { prop } = params;
     const editor = prop.editor;
@@ -18,16 +30,15 @@ const boolDetailsBuilder: TDetailsBuilder = (params) => {
 const componentDetailsBuilder: TDetailsBuilder = (params) => {
     const { prop, skin } = params;
     const editor = prop.editor;
-    const SampleReactComponents = {
-        SimpleComponent: () => (<div>ReactComponent</div>),
-    };
-    const NAMES = ['icon', 'indeterminateIcon', 'clearIcon', 'dropdownIcon', 'acceptIcon', 'cancelIcon'];
 
     if (editor.type === TPropEditorType.component) {
-        if (NAMES.indexOf(prop.name) !== -1) {
+        if (ICON_PROP_NAMES.indexOf(prop.name) !== -1) {
             const { name, ...rest } = getDocBySkin(skin, 'iconDoc').getProp('icon');
             return rest;
         }
+        const SampleReactComponents = {
+            SimpleComponent: () => (<div>ReactComponent</div>),
+        };
         return { examples: [SampleReactComponents.SimpleComponent] };
     }
     throw new Error('Unsupported type');
@@ -60,7 +71,7 @@ const oneOfDetailsBuilder: TDetailsBuilder = (params) => {
     const { prop, skin } = params;
     const editor = prop.editor;
     if (editor.type === TPropEditorType.oneOf) {
-        if (['color'].indexOf(prop.name) !== -1) {
+        if (COLOR_PROP_NAMES.indexOf(prop.name) !== -1) {
             const { name, examples, ...rest } = getDocBySkin(skin, 'colorDoc').getProp('color');
             return {
                 ...rest,

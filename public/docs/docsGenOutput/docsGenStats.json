@@ -1,8 +1,8 @@
 {
  "missingPropComment": {
   "totals": {
-   "amountProps": 816,
-   "amountTypes": 253
+   "amountProps": 813,
+   "amountTypes": 251
   },
   "value": [
    {
@@ -973,7 +973,6 @@
     "value": [
      "from",
      "renderRating",
-     "step",
      "to"
     ]
    },
@@ -1885,12 +1884,6 @@
     ]
    },
    {
-    "typeRef": "@epam/promo:RatingMods",
-    "value": [
-     "size"
-    ]
-   },
-   {
     "typeRef": "@epam/promo:RowSizeMod",
     "value": [
      "size"
@@ -1990,12 +1983,6 @@
     ]
    },
    {
-    "typeRef": "@epam/loveship:RatingMods",
-    "value": [
-     "size"
-    ]
-   },
-   {
     "typeRef": "@epam/loveship:RowMods",
     "value": [
      "spacing"
@@ -2090,7 +2077,7 @@
  },
  "missingTypeComment": {
   "totals": {
-   "amountTypes": 473
+   "amountTypes": 474
   },
   "value": [
    "@epam/uui-core:AcceptDropParams",
@@ -2481,6 +2468,7 @@
    "@epam/promo:NotificationCardProps",
    "@epam/promo:PanelMods",
    "@epam/promo:RatingMods",
+   "@epam/promo:RatingProps",
    "@epam/promo:RichTextViewMods",
    "@epam/promo:RichTextViewProps",
    "@epam/promo:RowSize",
@@ -3351,12 +3339,12 @@
  },
  "includedExports": {
   "totals": {
-   "allExports": 552,
+   "allExports": 553,
    "byModule": {
     "@epam/uui-core": 205,
     "@epam/uui-components": 92,
     "@epam/uui": 127,
-    "@epam/promo": 52,
+    "@epam/promo": 53,
     "@epam/loveship": 66,
     "@epam/uui-editor": 10
    }
@@ -3822,6 +3810,7 @@
      "NotificationCardMods",
      "PanelMods",
      "RatingMods",
+     "RatingProps",
      "RichTextViewMods",
      "RichTextViewProps",
      "RowMods",

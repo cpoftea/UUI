@@ -29590,6 +29590,9 @@
       "interface BaseRatingProps<TValue> extends IHasCX, IDisableable, IEditable<TValue>, ICanBeReadonly, IHasRawProps<React.HTMLAttributes<HTMLDivElement>>, IHasForwardedRef<HTMLDivElement> {",
       "    from?: number;",
       "    to?: number;",
+      "    /**",
+      "     * @default 1",
+      "     */",
       "    step?: 0.5 | 1;",
       "    renderRating?: (rating: number, markWidth: number, numberOfMarks: number) => React.ReactNode;",
       "}"
@@ -29621,6 +29624,14 @@
      {
       "uid": 3,
       "name": "step",
+      "comment": {
+       "raw": [
+        "@default 1"
+       ],
+       "tags": {
+        "@default": 1
+       }
+      },
       "typeValue": {
        "raw": "0.5 | 1"
       },
@@ -45750,8 +45761,8 @@
      "raw": "RatingProps",
      "print": [
       "interface RatingProps extends BaseRatingProps<number> {",
-      "    filledStarIcon?: any;",
-      "    emptyStarIcon?: any;",
+      "    filledStarIcon?: Icon;",
+      "    emptyStarIcon?: Icon;",
       "    hideTooltip?: boolean;",
       "    hint?: (value: number) => string;",
       "    Tooltip?: React.ComponentType<TooltipProps>;",
@@ -45763,7 +45774,10 @@
       "uid": 1,
       "name": "filledStarIcon",
       "typeValue": {
-       "raw": "any"
+       "raw": "Icon"
+      },
+      "editor": {
+       "type": "component"
       },
       "required": false
      },
@@ -45771,7 +45785,10 @@
       "uid": 2,
       "name": "emptyStarIcon",
       "typeValue": {
-       "raw": "any"
+       "raw": "Icon"
+      },
+      "editor": {
+       "type": "component"
       },
       "required": false
      },
@@ -45832,6 +45849,14 @@
      {
       "uid": 8,
       "name": "step",
+      "comment": {
+       "raw": [
+        "@default 1"
+       ],
+       "tags": {
+        "@default": 1
+       }
+      },
       "typeValue": {
        "raw": "0.5 | 1"
       },
@@ -88024,6 +88049,9 @@
      "raw": "RatingMods",
      "print": [
       "interface RatingMods {",
+      "    /**",
+      "     * @default '18'",
+      "     */",
       "    size?: 18 | 24 | 30;",
       "}"
      ]
@@ -88032,6 +88060,14 @@
      {
       "uid": 1,
       "name": "size",
+      "comment": {
+       "raw": [
+        "@default '18'"
+       ],
+       "tags": {
+        "@default": "18"
+       }
+      },
       "typeValue": {
        "raw": "18 | 24 | 30"
       },
@@ -88043,6 +88079,346 @@
         30
        ]
       },
+      "required": false
+     }
+    ],
+    "propsFromUnion": false
+   }
+  },
+  "@epam/promo:RatingProps": {
+   "summary": {
+    "module": "@epam/promo",
+    "typeName": {
+     "name": "RatingProps",
+     "nameFull": "RatingProps"
+    },
+    "src": "epam-promo/components/inputs/Rating.tsx",
+    "exported": true
+   },
+   "details": {
+    "kind": 263,
+    "typeValue": {
+     "raw": "RatingProps",
+     "print": [
+      "interface RatingProps extends uuiComponents.RatingProps, RatingMods {",
+      "}"
+     ]
+    },
+    "props": [
+     {
+      "uid": 1,
+      "name": "filledStarIcon",
+      "typeValue": {
+       "raw": "Icon"
+      },
+      "editor": {
+       "type": "component"
+      },
+      "from": "@epam/uui-components:RatingProps",
+      "required": false
+     },
+     {
+      "uid": 2,
+      "name": "emptyStarIcon",
+      "typeValue": {
+       "raw": "Icon"
+      },
+      "editor": {
+       "type": "component"
+      },
+      "from": "@epam/uui-components:RatingProps",
+      "required": false
+     },
+     {
+      "uid": 3,
+      "name": "hideTooltip",
+      "typeValue": {
+       "raw": "boolean"
+      },
+      "editor": {
+       "type": "bool"
+      },
+      "from": "@epam/uui-components:RatingProps",
+      "required": false
+     },
+     {
+      "uid": 4,
+      "name": "hint",
+      "typeValue": {
+       "raw": "(value: number) => string"
+      },
+      "editor": {
+       "type": "func"
+      },
+      "from": "@epam/uui-components:RatingProps",
+      "required": false
+     },
+     {
+      "uid": 5,
+      "name": "Tooltip",
+      "typeValue": {
+       "raw": "React.ComponentClass<TooltipProps, any> | React.FunctionComponent<TooltipProps>"
+      },
+      "from": "@epam/uui-components:RatingProps",
+      "required": false
+     },
+     {
+      "uid": 6,
+      "name": "from",
+      "typeValue": {
+       "raw": "number"
+      },
+      "editor": {
+       "type": "number"
+      },
+      "from": "@epam/uui-components:BaseRatingProps",
+      "required": false
+     },
+     {
+      "uid": 7,
+      "name": "to",
+      "typeValue": {
+       "raw": "number"
+      },
+      "editor": {
+       "type": "number"
+      },
+      "from": "@epam/uui-components:BaseRatingProps",
+      "required": false
+     },
+     {
+      "uid": 8,
+      "name": "step",
+      "comment": {
+       "raw": [
+        "@default 1"
+       ],
+       "tags": {
+        "@default": 1
+       }
+      },
+      "typeValue": {
+       "raw": "0.5 | 1"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        0.5,
+        1
+       ]
+      },
+      "from": "@epam/uui-components:BaseRatingProps",
+      "required": false
+     },
+     {
+      "uid": 9,
+      "name": "renderRating",
+      "typeValue": {
+       "raw": "(rating: number, markWidth: number, numberOfMarks: number) => React.ReactNode"
+      },
+      "editor": {
+       "type": "func"
+      },
+      "from": "@epam/uui-components:BaseRatingProps",
+      "required": false
+     },
+     {
+      "uid": 10,
+      "name": "cx",
+      "comment": {
+       "raw": [
+        "CSS class(es) to put on component's root. See {@link https://github.com/JedWatson/classnames#usage} for details"
+       ]
+      },
+      "typeValue": {
+       "raw": "null | string | number | boolean | ClassDictionary | ClassArray"
+      },
+      "typeValueRef": "@epam/uui-core:ClassValue",
+      "from": "@epam/uui-core:IHasCX",
+      "required": false
+     },
+     {
+      "uid": 11,
+      "name": "isDisabled",
+      "comment": {
+       "raw": [
+        "Disable editing, and visually de-emphasize value of the component"
+       ]
+      },
+      "typeValue": {
+       "raw": "boolean"
+      },
+      "editor": {
+       "type": "bool"
+      },
+      "from": "@epam/uui-core:IDisableable",
+      "required": false
+     },
+     {
+      "uid": 12,
+      "name": "value",
+      "comment": {
+       "raw": [
+        "The current value of component"
+       ]
+      },
+      "typeValue": {
+       "raw": "number"
+      },
+      "editor": {
+       "type": "number"
+      },
+      "from": "@epam/uui-core:IEditable",
+      "required": true
+     },
+     {
+      "uid": 13,
+      "name": "onValueChange",
+      "comment": {
+       "raw": [
+        "Called when value needs to be changed (usually due to user interaction)"
+       ]
+      },
+      "typeValue": {
+       "raw": "(newValue: number) => void"
+      },
+      "editor": {
+       "type": "func"
+      },
+      "from": "@epam/uui-core:IEditable",
+      "required": true
+     },
+     {
+      "uid": 14,
+      "name": "isInvalid",
+      "comment": {
+       "raw": [
+        "True if component contains invalid input"
+       ]
+      },
+      "typeValue": {
+       "raw": "boolean"
+      },
+      "editor": {
+       "type": "bool"
+      },
+      "from": "@epam/uui-core:ICanBeInvalid",
+      "required": false
+     },
+     {
+      "uid": 15,
+      "name": "validationMessage",
+      "comment": {
+       "raw": [
+        "Message describing why the value is invalid"
+       ]
+      },
+      "typeValue": {
+       "raw": "null | string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal"
+      },
+      "typeValueRef": "@types/react:ReactNode",
+      "from": "@epam/uui-core:ICanBeInvalid",
+      "required": false
+     },
+     {
+      "uid": 16,
+      "name": "validationProps",
+      "comment": {
+       "raw": [
+        "If T is a complex value (object or array), this property contains validation states of inner items"
+       ]
+      },
+      "typeValue": {
+       "raw": "{ [key: string]: ICanBeInvalid; }"
+      },
+      "from": "@epam/uui-core:ICanBeInvalid",
+      "required": false
+     },
+     {
+      "uid": 17,
+      "name": "isReadonly",
+      "comment": {
+       "raw": [
+        "Disable editing. Unlike isDisabled, keep component's value readable."
+       ]
+      },
+      "typeValue": {
+       "raw": "boolean"
+      },
+      "editor": {
+       "type": "bool"
+      },
+      "from": "@epam/uui-core:ICanBeReadonly",
+      "required": false
+     },
+     {
+      "uid": 18,
+      "name": "isRequired",
+      "comment": {
+       "raw": [
+        "Marks that component's value is required"
+       ]
+      },
+      "typeValue": {
+       "raw": "boolean"
+      },
+      "editor": {
+       "type": "bool"
+      },
+      "from": "@epam/uui-core:ICanBeRequired",
+      "required": false
+     },
+     {
+      "uid": 19,
+      "name": "rawProps",
+      "comment": {
+       "raw": [
+        "Any HTML attributes (native or 'data-') to put on the underlying component"
+       ]
+      },
+      "typeValue": {
+       "raw": "React.HTMLAttributes<HTMLDivElement> & Record<`data-${string}`, string>"
+      },
+      "from": "@epam/uui-core:IHasRawProps",
+      "required": false
+     },
+     {
+      "uid": 20,
+      "name": "forwardedRef",
+      "comment": {
+       "raw": [
+        "this ref is passed to the underlying component"
+       ]
+      },
+      "typeValue": {
+       "raw": "null | (instance: HTMLDivElement | null) => void | React.MutableRefObject<HTMLDivElement | null>"
+      },
+      "from": "@epam/uui-core:IHasForwardedRef",
+      "required": false
+     },
+     {
+      "uid": 21,
+      "name": "size",
+      "comment": {
+       "raw": [
+        "@default '18'"
+       ],
+       "tags": {
+        "@default": "18"
+       }
+      },
+      "typeValue": {
+       "raw": "18 | 24 | 30"
+      },
+      "editor": {
+       "type": "oneOf",
+       "options": [
+        18,
+        24,
+        30
+       ]
+      },
+      "from": "@epam/promo:RatingMods",
       "required": false
      }
     ],
@@ -94751,6 +95127,9 @@
      "raw": "RatingMods",
      "print": [
       "interface RatingMods {",
+      "    /**",
+      "     * @default '18'",
+      "     */",
       "    size?: 18 | 24 | 30;",
       "}"
      ]
@@ -94759,6 +95138,14 @@
      {
       "uid": 1,
       "name": "size",
+      "comment": {
+       "raw": [
+        "@default '18'"
+       ],
+       "tags": {
+        "@default": "18"
+       }
+      },
       "typeValue": {
        "raw": "18 | 24 | 30"
       },
@@ -94800,7 +95187,10 @@
       "uid": 1,
       "name": "filledStarIcon",
       "typeValue": {
-       "raw": "any"
+       "raw": "Icon"
+      },
+      "editor": {
+       "type": "component"
       },
       "from": "@epam/uui-components:RatingProps",
       "required": false
@@ -94809,7 +95199,10 @@
       "uid": 2,
       "name": "emptyStarIcon",
       "typeValue": {
-       "raw": "any"
+       "raw": "Icon"
+      },
+      "editor": {
+       "type": "component"
       },
       "from": "@epam/uui-components:RatingProps",
       "required": false
@@ -94874,6 +95267,14 @@
      {
       "uid": 8,
       "name": "step",
+      "comment": {
+       "raw": [
+        "@default 1"
+       ],
+       "tags": {
+        "@default": 1
+       }
+      },
       "typeValue": {
        "raw": "0.5 | 1"
       },
@@ -95076,6 +95477,14 @@
      {
       "uid": 21,
       "name": "size",
+      "comment": {
+       "raw": [
+        "@default '18'"
+       ],
+       "tags": {
+        "@default": "18"
+       }
+      },
       "typeValue": {
        "raw": "18 | 24 | 30"
       },

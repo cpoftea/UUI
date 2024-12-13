@@ -2,7 +2,7 @@
 
 **What's New**
 * [RTE]:
-  * `paragraphPlugin`:
+  * `paragraphPlugin`, `linkPlugin`:
     * added full extendability support and types  
       Created with `createPluginFactory`, see [Plate docs / createPluginFactory](https://github.com/udecode/plate/blob/23d841bf57fef940ae8f4d20ee383474dbc6cdd6/apps/www/content/docs/api/core.mdx#createpluginfactory).
     * added `slate-` class name to plugin element  

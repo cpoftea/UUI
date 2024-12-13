@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { ELEMENT_LINK, TLinkElement, unwrapLink, upsertLink } from '@udecode/plate-link';
+import { type TLinkElement, unwrapLink, upsertLink } from '@udecode/plate-link';
 import { PlateEditor, getPluginType, findNode, getAboveNode } from '@udecode/plate-common';
 import { IModal } from '@epam/uui-core';
 import { FlexRow, ModalWindow, ModalBlocker, ModalFooter, ModalHeader, Button, LabeledInput, TextInput } from '@epam/uui';
+import { LINK_KEY } from './constants';
 
 import css from './link.module.scss';
 
@@ -13,7 +14,7 @@ interface AddLinkModalProps extends IModal<any> {
 export function AddLinkModal({ editor, ...modalProps }: AddLinkModalProps) {
     const { success, abort } = modalProps;
     const [link, setLink] = useState(() => {
-        const type = getPluginType(editor, ELEMENT_LINK);
+        const type = getPluginType(editor, LINK_KEY);
         const linkNode = getAboveNode(editor, {
             match: { type },
         });
@@ -28,7 +29,7 @@ export function AddLinkModal({ editor, ...modalProps }: AddLinkModalProps) {
         // selection contains at one edge edge or between the edges
         const linkEntry = findNode<TLinkElement>(editor, {
             at: editor.selection,
-            match: { type: getPluginType(editor, ELEMENT_LINK) },
+            match: { type: getPluginType(editor, LINK_KEY) },
         });
         if (linkEntry) {
             return linkEntry[0].url;

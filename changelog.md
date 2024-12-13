@@ -1,3 +1,15 @@
+# 5.xx.xx - xx.xx.2024
+
+**What's New**
+* [RTE]:
+  * `paragraphPlugin`:
+    * added full extendability support and types  
+      Created with `createPluginFactory`, see [Plate docs / createPluginFactory](https://github.com/udecode/plate/blob/23d841bf57fef940ae8f4d20ee383474dbc6cdd6/apps/www/content/docs/api/core.mdx#createpluginfactory).
+    * added `slate-` class name to plugin element  
+      Now corresponds to [Plate docs / Styling with CSS](https://github.com/udecode/plate/blob/23d841bf57fef940ae8f4d20ee383474dbc6cdd6/apps/www/content/docs/plugin-components.mdx#styling-with-css).
+
+**What's Fixed**
+
 # 5.12.0 - 12.12.2024
 
 **What's New**

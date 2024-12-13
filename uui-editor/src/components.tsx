@@ -2,7 +2,7 @@ import React from 'react';
 import { MARK_BOLD, MARK_CODE, MARK_ITALIC, MARK_SUPERSCRIPT, MARK_UNDERLINE } from '@udecode/plate-basic-marks';
 import { PlatePluginComponent } from '@udecode/plate-common';
 import { ELEMENT_H1, ELEMENT_H2, ELEMENT_H3, ELEMENT_H4, ELEMENT_H5, ELEMENT_H6 } from '@udecode/plate-heading';
-import { ELEMENT_PARAGRAPH } from '@udecode/plate-paragraph';
+import { PARAGRAPH_KEY, ParagraphElement } from './plugins/paragraphPlugin';
 
 export type DefaultPluginKey =
     | typeof ELEMENT_H1
@@ -11,7 +11,7 @@ export type DefaultPluginKey =
     | typeof ELEMENT_H4
     | typeof ELEMENT_H5
     | typeof ELEMENT_H6
-    | typeof ELEMENT_PARAGRAPH
+    | typeof PARAGRAPH_KEY
     | typeof MARK_BOLD
     | typeof MARK_CODE
     | typeof MARK_ITALIC
@@ -30,7 +30,7 @@ export const createPlateUI = <T extends string = string>(
         [ELEMENT_H4]: (props) => <h4 { ...props.attributes }>{ props.children }</h4>,
         [ELEMENT_H5]: (props) => <h5 { ...props.attributes }>{ props.children }</h5>,
         [ELEMENT_H6]: (props) => <h6 { ...props.attributes }>{ props.children }</h6>,
-        [ELEMENT_PARAGRAPH]: (props) => <p { ...props.attributes }>{ props.children }</p>,
+        [PARAGRAPH_KEY]: ParagraphElement,
         [MARK_BOLD]: (props) => <strong { ...props.attributes }>{ props.children }</strong>,
         [MARK_CODE]: (props) => <code { ...props.attributes }>{ props.children }</code>,
         [MARK_ITALIC]: (props) => <em { ...props.attributes }>{ props.children }</em>,

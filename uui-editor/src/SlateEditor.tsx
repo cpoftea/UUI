@@ -25,7 +25,7 @@ export interface PlateEditorProps
     extends IEditable<EditorValue>,
     IHasCX,
     IHasRawProps<React.HTMLAttributes<HTMLDivElement>>, Pick<PlateProps, 'maxLength'> {
-    plugins: PlatePlugin[];
+    plugins: PlatePlugin<any>[];
     isReadonly?: boolean;
     autoFocus?: boolean;
     minHeight?: number | 'none';

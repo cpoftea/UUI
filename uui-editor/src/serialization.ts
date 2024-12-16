@@ -32,7 +32,7 @@ import { migrateLegacySchema } from './migrations/legacy_migrations';
 
 type SerializerType = 'html' | 'md';
 
-export const htmlSerializationsWorkingPlugins: PlatePlugin[] = [
+export const htmlSerializationsWorkingPlugins: PlatePlugin<any>[] = [
     ...baseMarksPlugin(),
     paragraphPlugin(),
     headerPlugin(),
@@ -47,7 +47,7 @@ export const htmlSerializationsWorkingPlugins: PlatePlugin[] = [
     separatorPlugin(),
 ];
 
-export const mdSerializationsWorkingPlugins: PlatePlugin[] = [
+export const mdSerializationsWorkingPlugins: PlatePlugin<any>[] = [
     createDeserializeMdPlugin(),
     boldPlugin(),
     italicPlugin(),

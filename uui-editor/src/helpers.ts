@@ -88,7 +88,7 @@ export class SelectionUtils {
     }
 }
 
-export const createTempEditor = (plugins: PlatePlugin[]): PlateEditor => {
+export const createTempEditor = (plugins: PlatePlugin<any>[]): PlateEditor => {
     return createPlateEditor({
         plugins: createPlugins((plugins).flat(), {
             components: createPlateUI(),

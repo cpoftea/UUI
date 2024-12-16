@@ -1,6 +1,5 @@
+import type { HeadingsPlugin } from '@udecode/plate-heading';
 import { WithToolbarButton } from '../../implementation/Toolbars';
-import { HeaderType } from './constants';
+import type { HeadersConfig } from './constants';
 
-export type HeaderPluginOptions = WithToolbarButton & {
-    headers: HeaderType[]
-};
+export type HeaderPluginOptions = WithToolbarButton & HeadingsPlugin & HeadersConfig;

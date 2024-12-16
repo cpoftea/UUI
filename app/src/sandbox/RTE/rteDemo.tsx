@@ -47,8 +47,8 @@ const getPlugins = () => {
     return [
         ...defaultPlugins,
         ...baseMarksPlugin(),
-        headerPlugin(
-            {
+        headerPlugin({
+            options: {
                 headers: [
                     'header-1',
                     'header-2',
@@ -58,7 +58,7 @@ const getPlugins = () => {
                     'header-6',
                 ],
             },
-        ),
+        }),
         colorPlugin(
             {
                 colors: [

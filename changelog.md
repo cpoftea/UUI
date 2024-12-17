@@ -2,7 +2,7 @@
 
 **What's New**
 * [RTE]:
-  * `paragraphPlugin`, `linkPlugin`, `headerPlugin`:
+  * `paragraphPlugin`, `linkPlugin`, `headerPlugin`, `notePlugin`:
     * added full extendability support and types  
       Created with `createPluginFactory`, see [Plate docs / createPluginFactory](https://github.com/udecode/plate/blob/23d841bf57fef940ae8f4d20ee383474dbc6cdd6/apps/www/content/docs/api/core.mdx#createpluginfactory).
     * added `slate-` class name to plugin element  
@@ -14,6 +14,14 @@
     
     // after
     headerPlugin({ options: { headers: [...] } })
+    ```
+  * [Breaking change] `notePlugin`: plugin options moved  
+    ```js
+    // before
+    notePlugin({ notes: [...] })
+    
+    // after
+    notePlugin({ options: { notes: [...] } })
     ```
 
 **What's Fixed**

@@ -1,18 +1,14 @@
-import {
-    AnyObject,
-    createPluginFactory, PlatePlugin,
-} from '@udecode/plate-common';
+import { createPluginFactory, type PlatePlugin } from '@udecode/plate-common';
 import { NotePluginBlock } from './NotePluginBlock';
 import { defaultNotesConfig, NODE_PLUGIN_KEY } from './constants';
-import { NodeConfig, NoteConfigItem, NoteNodeProps, NotePluginOptions } from './types';
+import type { NoteConfigItem, NoteNodeProps, NotePluginOptions } from './types';
 import { NoteButton } from './NoteBar';
 
-const createPlugin = (config: NoteConfigItem): PlatePlugin => {
+const createPlugin = (config: NoteConfigItem) => {
     return {
         key: config.type,
         type: config.type,
         isElement: true,
-        isVoid: false,
         component: NotePluginBlock,
         props: () => ({
             nodeProps: {
@@ -21,23 +17,17 @@ const createPlugin = (config: NoteConfigItem): PlatePlugin => {
                 toolbarIcon: config.toolbarIcon,
             } as NoteNodeProps,
         }),
-    };
+    } satisfies PlatePlugin;
 };
 
-export const notePlugin = (noteConfig?: NodeConfig): PlatePlugin => {
-    const notes = !!noteConfig?.notes?.length ? noteConfig.notes : defaultNotesConfig;
-
-    const createNotePlugin = createPluginFactory<AnyObject>({
-        key: NODE_PLUGIN_KEY,
-        isElement: true,
-        isVoid: false,
-        component: NotePluginBlock,
-        plugins: notes.map((config) => createPlugin(config)),
-        options: {
-            bottomBarButton: NoteButton,
-            notes,
-        } as NotePluginOptions,
-    });
-
-    return createNotePlugin();
-};
+export const notePlugin = createPluginFactory<NotePluginOptions>({
+    key: NODE_PLUGIN_KEY,
+    component: NotePluginBlock,
+    options: {
+        bottomBarButton: NoteButton,
+        notes: defaultNotesConfig,
+    },
+    then: (_editor, plugin) => ({
+        plugins: plugin.options.notes.map((config) => createPlugin(config)),
+    }),
+});

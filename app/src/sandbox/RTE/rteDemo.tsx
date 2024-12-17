@@ -78,26 +78,28 @@ const getPlugins = () => {
         linkPlugin(),
         // ...[...defaultNotesConfig],
         notePlugin({
-            notes: [
-                {
-                    type: 'note-type-one',
-                    backgroundColor: '#063970',
-                    borderColor: '#2596be',
-                    toolbarIcon: () => <CustomIcon backgroundColor="#063970" />,
-                },
-                {
-                    type: 'note-type-two',
-                    backgroundColor: '#eab676',
-                    borderColor: '#e28743',
-                    toolbarIcon: () => <CustomIcon backgroundColor="#eab676" />,
-                },
-                {
-                    type: 'note-type-three',
-                    backgroundColor: '#dfc8a2',
-                    borderColor: '#873e23',
-                    toolbarIcon: () => <CustomIcon backgroundColor="rgb(135,62,35)" />,
-                },
-            ],
+            options: {
+                notes: [
+                    {
+                        type: 'note-type-one',
+                        backgroundColor: '#063970',
+                        borderColor: '#2596be',
+                        toolbarIcon: () => <CustomIcon backgroundColor="#063970" />,
+                    },
+                    {
+                        type: 'note-type-two',
+                        backgroundColor: '#eab676',
+                        borderColor: '#e28743',
+                        toolbarIcon: () => <CustomIcon backgroundColor="#eab676" />,
+                    },
+                    {
+                        type: 'note-type-three',
+                        backgroundColor: '#dfc8a2',
+                        borderColor: '#873e23',
+                        toolbarIcon: () => <CustomIcon backgroundColor="rgb(135,62,35)" />,
+                    },
+                ],
+            },
         }),
         uploadFilePlugin({ uploadFile: uploadFile }),
         attachmentPlugin(),

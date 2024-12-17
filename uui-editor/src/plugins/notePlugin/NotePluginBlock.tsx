@@ -2,10 +2,10 @@ import cx from 'classnames';
 import * as React from 'react';
 
 import css from './NotePluginBlock.module.scss';
-import { PlateElementProps } from '@udecode/plate-common';
+import { PlateElement, type PlateElementProps } from '@udecode/plate-common';
 import { NoteNodeProps } from './types';
 
-export function NotePluginBlock({ attributes, children, nodeProps }: PlateElementProps) {
+export function NotePluginBlock({ children, nodeProps, ...props }: PlateElementProps) {
     let style;
     if (nodeProps) {
         const { borderColor, backgroundColor } = nodeProps as NoteNodeProps;
@@ -16,8 +16,13 @@ export function NotePluginBlock({ attributes, children, nodeProps }: PlateElemen
     }
 
     return (
-        <div { ...attributes } style={ style } className={ cx(css.wrapper) }>
+        <PlateElement
+            { ...props }
+            nodeProps={ nodeProps }
+            style={ { ...style, ...props.style } }
+            className={ cx(props.className, css.wrapper) }
+        >
             { children }
-        </div>
+        </PlateElement>
     );
 }

@@ -361,7 +361,7 @@ export const slateInitialValue = [
         ],
     },
     {
-        type: 'h5',
+        type: 'uui-richTextEditor-header-5',
         children: [
             {
                 text: 'Headers and Links',
